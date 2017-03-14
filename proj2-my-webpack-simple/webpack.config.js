@@ -43,6 +43,9 @@ module.exports = {
       'vue$': 'vue/dist/vue.esm.js'
     }
   },
+  // resolveLoader: {
+  //   fallback: [path.join(__dirname, '../node_modules')]
+  // },
   devServer: {
     historyApiFallback: true,
     noInfo: true
