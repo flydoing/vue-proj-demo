@@ -10,14 +10,6 @@ const router = new VueRouter({
   linkActiveClass:'footer-act'
 })
 
-/* eslint-disable no-new */
-// new Vue({
-//   el: '#app',
-//   template: '<App/>',
-//   components: { App },
-//   router
-// })
-
 const app = new Vue({
 	router
 }).$mount('#app');
