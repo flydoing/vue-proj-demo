@@ -25,6 +25,12 @@ module.exports = {
         }
       },
       {
+          test: /\.scss$/,
+          exclude: /node_modules/,
+          // loaders: ["css", "sass"]//已经不允许省略loader
+          loaders: ["style-loader", "css-loader", "sass-loader"]
+      },
+      {
         test: /\.js$/,
         loader: 'babel-loader',
         exclude: /node_modules/

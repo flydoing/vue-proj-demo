@@ -1,34 +1,33 @@
 <template>
-  <div>
-    <comHeader v-bind:my-page="$route.name"></comHeader>
-    <router-view></router-view>
-    <comFooter v-bind:my-page="page"></comFooter>
-  </div>
+	<div class="app">
+		<comHeader v-bind:nowPage="$route.name"></comHeader>
+		<router-view></router-view>
+		<comFooter v-bind:nowPage="$route.name"></comFooter>
+	</div>
 </template>
 
 <script>
 
 import Header from './components/com/header.vue'
 import Footer from './components/com/footer.vue'
-import Page1 from './components/page/page1.vue'
+// import Page1 from './components/page/page1.vue'
+
+import './css/app.scss'
 
 var data = {
-  page: 'page1'
+	page: 'page1'
 }
 export default {
-  data(){
-    // return {}
-    return data
-  },
-  components:{
-    comHeader: Header,
-    comFooter: Footer,
-    comPage1: Page1
-  }
+	data(){
+		// return {}
+		return data
+	},
+	components:{
+		comHeader: Header,
+		comFooter: Footer,
+		// comPage1: Page1
+	}
 }
 
 </script>
 
-<style lang="scss">
-
-</style>

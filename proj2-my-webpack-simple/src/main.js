@@ -6,8 +6,8 @@ import routes from './routes.js'
 Vue.use(VueRouter)
 
 const router = new VueRouter({
-  routes,
-  linkActiveClass:'footer-act'
+	routes,
+	linkActiveClass:'footer-act'
 })
 
 const app = new Vue({
