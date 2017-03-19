@@ -1,6 +1,9 @@
 <template>
 	<div class="header">
-		<h2><a class="header-back" href="javascript:;" v-on:click="goBack"> < 返回</a>{{nowRouter}}</h2>
+		<h2>
+			<a class="header-back" href="javascript:;" v-on:click="goBack"> < 返回</a>
+			<span class="header-title">{{nowRouter}}</span>
+		</h2>
 	</div>
 </template>
 
