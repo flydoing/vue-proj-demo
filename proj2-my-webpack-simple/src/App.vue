@@ -1,7 +1,9 @@
 <template>
 	<div class="app">
 		<comHeader v-bind:nowPage="$route.name"></comHeader>
-		<router-view></router-view>
+		<transition name="myFade" mode="out-in">
+			<router-view></router-view>
+		</transition>
 		<comFooter v-bind:nowPage="$route.name"></comFooter>
 	</div>
 </template>

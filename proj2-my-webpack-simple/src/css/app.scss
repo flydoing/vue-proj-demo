@@ -61,6 +61,12 @@ body{position:relative;max-width: 640px;min-width: 320px;margin:0 auto;height: 1
 .page h1{
 	font-size: 15px;
 }
+.myFade-enter-active, .myFade-leave-active {
+  transition: opacity .3s
+}
+.myFade-enter, .myFade-leave-active {
+  opacity: 0
+}
 
 
 
