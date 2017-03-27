@@ -13,7 +13,7 @@ export default [
 		children: [
 			{ path: 'page1', name: 'page1', component: Page1 },
 			{ path: 'page2', name: 'page2', component: Page2 },
-			{ path: 'page3/:id', name: 'page3', component: Page3 },
+			// { path: 'page3/:id', name: 'page3', component: Page3 },
 			{ path: 'page4', redirect: 'page4/child1', name: 'page4', component: Page4,
 				//此处用路由不合理呀，改为v-if show
 				children: [

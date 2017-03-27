@@ -17,12 +17,12 @@
 	  	nowRouter: function(){
 	  		let newPage;
 	  		switch(this.nowPage){
-	  			case 'page1': 	newPage = '第一页'; break;
-	  			case 'page2': 	newPage = '第二页'; break;
-	  			case 'page3': 	newPage = '第三页'; break;
-	  			case 'child1': 	newPage = '第四页1'; break;
-	  			case 'child2': 	newPage = '第四页2'; break;
-	  			default: 	  	newPage = '第一页'; break;
+	  			case 'page1': 	newPage = '游戏首页'; break;
+	  			case 'page2': 	newPage = '用户中心'; break;
+	  			// case 'page3': 	newPage = '客服帮助'; break;
+	  			case 'child1': 	newPage = '客服-问题提单'; break;
+	  			case 'child2': 	newPage = '客服-常见问题'; break;
+	  			default: 	  	newPage = '游戏首页'; break;
 	  		}
 	  		return newPage;
 	  	}

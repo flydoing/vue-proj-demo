@@ -1,11 +1,11 @@
 <template>
 	<div class="footer">
 		<!-- <h2>comFooter: {{nowPage}}</h2> -->
-		<router-link to="/page1" >首页</router-link>
-		<router-link to="/page2" >页面2</router-link>
-		<router-link to="/page3/page31" >页面31</router-link>
-		<router-link to="/page3/page32" >页面32</router-link>
-		<router-link to="/page4" >页面4</router-link>
+		<router-link to="/page1" >游戏首页</router-link>
+		<router-link to="/page2" >用户中心</router-link>
+		<!-- <router-link to="/page3/page31" >页面31</router-link>
+		<router-link to="/page3/page32" >页面32</router-link> -->
+		<router-link to="/page4" >客服提单</router-link>
 
 		<!-- <a href="javascript:;" v-on:click="route1">link1</a>
 		<a href="javascript:;" v-on:click="route2">link2</a>
