@@ -1,5 +1,5 @@
 .page{
-	padding: 10px 20px;
+	// padding: 10px 20px;
 	text-align: center;
 }
 .page h1{
@@ -13,7 +13,7 @@
 }
 //page1
 .game-li{
-	padding: .55rem 0;
+	padding: .85rem .6rem .5rem;
 	text-align: left;
 	border-bottom:1px solid #D1D1D1;
 	.game-one{
@@ -66,6 +66,7 @@ img{border: 0;}
 html{font-size: 40px;background: #ffffff;-webkit-overflow-scrolling: touch;}
 body{position:relative;max-width: 750px;min-width: 320px;margin:0 auto;background: #ffffff;}
 $bsRed : #E6191C;
+$border: #dbdbdb;
 .app{
 	position:relative;
 	padding:2.2rem 0 4rem;
@@ -196,6 +197,111 @@ $bsRed : #E6191C;
 .footer .footer-act,.footer-act{
 	font-size: .95rem;
 	color: yellow;
+}
+
+.x-center-ban{
+	position: relative;
+	width: 100%;
+	height: 8.175rem;
+	background: #fb292c;
+	// background: #e71c1f;
+	.ban-p{
+		position: relative;
+		height: 2.925rem;
+		padding: 2.5rem 3rem 0 .875rem;
+		overflow: hidden;
+		vertical-align: middle;
+	}
+	.ban-img{
+		float: left;
+		width: 2.925rem;
+		height: 2.925rem;
+		margin-right: .375rem;
+		border-radius: 4.275rem;
+	}
+	.ban-account{
+		float: left;
+		margin-top: .875rem;
+		font-size: .8rem;
+		color: #fff;
+	}
+	.ban-bind{
+		display: none;
+		float: right;
+		margin-top: .7rem;
+		padding: .1rem .5rem;
+		font-size: .8rem;
+		border-radius: .8rem;
+		border: 2px solid #fff;
+		color: #fff;
+	}
+}
+.x-center-cont{
+	position:relative;
+	width: 100%;
+	padding-top: .5rem;
+	background: #f1f6f4;
+}
+.cont-item1{
+	display: block;
+	margin-bottom: .5rem;
+	padding: 0 1.25rem 0 1.2rem;
+	background: #ffffff;
+	border-top: 1px solid $border;
+	border-bottom: 1px solid $border;
+	a{
+		display: block;
+		height: 2.5rem;
+	}
+	.x-icon{
+		float: left;
+		display: inline-block;
+		width: 1.2rem;
+		height: 2.5rem;
+		margin-right: .625rem;
+	}
+	.c-icon-mima{
+		// background:url(../img/c-center-mima.png) no-repeat center;
+		background-size: 1.1rem;
+	}
+	.c-icon-anquan{
+		// background:url(../img/c-center-anquan.png) no-repeat center;
+		background-size: 1.1rem;
+	}
+	.c-icon-chzhi{
+		// background:url(../img/c-center-chzhi.png) no-repeat center;
+		background-size: 1.1rem;
+	}
+	.item1-p{
+		float: left;
+		display: inline-block;
+		height: 2.5rem;
+		line-height: 2.5rem;
+		font-size: .8rem;
+	}
+	.c-right{
+		float: right;
+		display: inline-block;
+		width: .55rem;
+		height: 2.5rem;
+		// background:url(../img/arrow-right.png) no-repeat center;
+		background-size: .55rem 1rem;
+	}
+}
+.cont-btn{
+	margin-bottom: .5rem;
+	padding: 0 1.25rem 0 1.2rem;
+	border-top: 1px solid $border;
+	border-bottom: 1px solid $border;
+	background: #ffffff;
+	a{
+		display: block;
+		height: 2.5rem;
+		line-height: 2.5rem;
+		text-align: center;
+		font-size: .8rem;
+		color: #e6191c;
+	}
 }
 
 
