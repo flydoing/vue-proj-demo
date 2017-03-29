@@ -1,16 +1,19 @@
 <template>
   <div class="page">
-    <h1>{{data}} {{reverseData}}</h1>
+    <!-- <h1>{{data}} {{reverseData}}</h1> -->
     <!-- <div v-on:click="getdataNewGame">点击</div> -->
-    <div>{{data}}</div>
+    <!-- <div>{{data}}</div> -->
     <ul class="newGame">
 		<li class="game-li" v-for="game in dataNewGame">
-			<a class="game-one" href="#">
+			<!-- <a class="game-one" href="#"> -->
+			<!-- <router-link class="game-one" :to="{path: '/page5'}"> -->
+			<router-link class="game-one" v-bind:to="{ name: 'page5', params: { id: game.id }}">
 				<img class="game-img" v-bind:src="game.icon_url"/>
-				<h4 class="game-name">{{game.app_name}}</h4>
+				<h4 class="game-name">{{game.name}}</h4>
 				<p class="game-des">{{game.category_name}}</p>
 				<p class="game-des">{{game.short_desc}}</p>
-			</a>
+			<!-- </a> -->
+			</router-link>
 			<a class="game-btn" v-bind:href="game.andriod_url">下载</a>
 		</li>
 		<!-- <li class="game-li">

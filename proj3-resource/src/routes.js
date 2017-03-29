@@ -20,7 +20,8 @@ export default [
 					{path: 'child1', name: 'child1', component: Child1 },
 					{path: 'child2', name: 'child2', component: Child2 }
 				]
-			}
+			},
+			{ path: 'page5/:id', name: 'page5', component: Page5 },
 		]
 	}
 ]
