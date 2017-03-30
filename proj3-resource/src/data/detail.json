@@ -1,0 +1,21 @@
+{
+    "state": 1,
+    "msg": "成功",
+    "data": {
+    	"name": "盗墓笔记",
+    	"category_name": "卡牌",
+    	"short_desc": "用我一生，换你十年天真无邪",
+    	"desc": "游戏介绍游戏介绍游戏介绍游戏介绍游戏介绍游戏介绍游戏介绍游戏介绍游戏介绍游戏介绍游戏介绍游戏介绍游戏介绍游戏介绍游戏介绍游戏介绍游戏介绍游戏介绍游戏介绍游戏介绍游戏介绍游戏介绍游戏介绍游戏介绍游戏介绍游戏介绍游戏介绍游戏介绍游戏介绍游戏介绍游戏介绍游戏介绍游戏介绍游戏介绍游戏介绍游戏介绍游戏介绍游戏介绍游戏介绍游戏介绍游戏介绍游戏介绍。",
+    	"url_ban": "http://img01.starjoys.com/p_upload/2017/0103/1483414999204112.jpg",
+    	"url_icon": "http://tsource.starjoys.com/platform/wap/static/dist/images/game-icon.png",
+    	"andriod_url": "http://dmbj.resources.eazifun.com/android/TTGW_dmbj.apk",
+    	"ios_url": "https://itunes.apple.com/cn/app/dao-mu-bi-ji-zheng-ban-shou-quan/id914399667?mt=8",
+    	"url_pics": [
+    		"http://img01.starjoys.com/p_upload/2017/0103/1483415540969263.jpg",
+    		"http://img01.starjoys.com/p_upload/2017/0103/1483415478909362.jpg",
+    		"http://img01.starjoys.com/p_upload/2017/0103/1483415458532381.jpg",
+    		"http://tsource.starjoys.com/platform/wap/static/dist/images/pic-show.jpg",
+    		"http://tsource.starjoys.com/platform/wap/static/dist/images/ban.jpg"
+    	]
+    }
+}

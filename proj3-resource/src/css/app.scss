@@ -1,6 +1,6 @@
 .page{
 	// padding: 10px 20px;
-	text-align: center;
+	// text-align: center;
 }
 .page h1{
 	font-size: 15px;
@@ -65,7 +65,7 @@ a{color: black;text-decoration: none;}
 img{border: 0;}
 html{font-size: 40px;background: #ffffff;-webkit-overflow-scrolling: touch;}
 body{position:relative;max-width: 750px;min-width: 320px;margin:0 auto;background: #ffffff;}
-$bsRed : #E6191C;
+$red : #E6191C;
 $border: #dbdbdb;
 .app{
 	position:relative;
@@ -82,7 +82,7 @@ $border: #dbdbdb;
 	min-width: 320px;
 	margin:0 auto;
 	color: #fff;
-	background: $bsRed;
+	background: $red;
 	.nav-logo{
 		float: left;
 		// position: relative;
@@ -175,7 +175,7 @@ $border: #dbdbdb;
 	min-width: 320px;
 	margin:0 auto;
 	color: #fff;
-	background: $bsRed;
+	background: $red;
 
 	// position: fixed;
 	// bottom: 0;
@@ -198,6 +198,26 @@ $border: #dbdbdb;
 	font-size: .95rem;
 	color: yellow;
 }
+.page-tab{
+	overflow: hidden;
+	padding: .25rem 0;
+	border-bottom:1px solid $border;
+}
+.page-tab .footer-act{
+	font-size: .95rem;
+	color: green;
+}
+.page-tab .tab-a{
+	float: left;
+	width: 48%;
+	text-align: center;
+	font-size: .95rem;
+	
+}
+.page-tab>:first-child{
+	border-right:1px solid $border;
+}
+
 
 .x-center-ban{
 	position: relative;
@@ -260,18 +280,6 @@ $border: #dbdbdb;
 		height: 2.5rem;
 		margin-right: .625rem;
 	}
-	.c-icon-mima{
-		// background:url(../img/c-center-mima.png) no-repeat center;
-		background-size: 1.1rem;
-	}
-	.c-icon-anquan{
-		// background:url(../img/c-center-anquan.png) no-repeat center;
-		background-size: 1.1rem;
-	}
-	.c-icon-chzhi{
-		// background:url(../img/c-center-chzhi.png) no-repeat center;
-		background-size: 1.1rem;
-	}
 	.item1-p{
 		float: left;
 		display: inline-block;
@@ -301,6 +309,142 @@ $border: #dbdbdb;
 		text-align: center;
 		font-size: .8rem;
 		color: #e6191c;
+	}
+}
+// page5
+.ban-cont{
+	position:relative;
+	width:18.75rem;
+	height:10.275rem;
+	overflow:hidden;
+}
+.ban-bg{
+	display:block;
+	width:18.75rem;
+	height: 10.275rem;
+}
+.cont-bot{
+	position:absolute;
+	bottom: 0;
+	width: 100%;
+	color: white;
+	background: rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: -1px -4px 35px 9px rgba(0,0,0,0.32);
+	-moz-box-shadow: -1px -4px 35px 9px rgba(0,0,0,0.32);
+	box-shadow: -1px -4px 35px 9px rgba(0,0,0,0.32);
+}
+.bot{
+	position:relative;
+	overflow:hidden;
+	padding: .375rem 0;
+	background: rgba(255, 255, 255, 0.3);
+}
+.bot a{
+	float: left;
+	width: 9rem;
+	text-align:center;
+	color:white;
+}
+.bot .bot-right{
+	float: right;
+	border-left: 1px solid #9F9795;
+}
+.bot span{
+	font-size: .45rem;
+}
+.bot p{
+	margin: .1rem 0;
+	font-size: .4rem;
+	color: #ccc7c6;
+}
+.game{
+	position:relative;
+	overflow:hidden;
+	padding: .7rem .55rem;
+	padding-top: .1rem;
+	.game-img{
+		float: left;
+		margin-right: 1rem;
+		width: 2.4rem;
+		height: 2.4rem;
+		border-radius: .2rem;
+		border:1px solid #ffffff;
+	}
+	.game-name{
+		font-size: .625rem;
+		margin: .1rem 0 .4rem;
+		letter-spacing: 1px;
+		max-width: 10.75rem;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+	.game-des{
+		font-size: .45rem;
+		color: #ccc7c6;
+		max-width: 10.75rem;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+}
+.nav-p{
+	padding: .25rem .75rem;
+	font-size:.6rem;
+	color: #444444;
+	background: #EFEFEF;
+}
+.game-ins{
+	padding: .5rem .4rem .8rem;
+	background: #FFFFFF;
+	.ins-p{
+		margin: 0 0 .375rem;
+		font-size: .5rem;
+		text-indent: 2em;
+		color: #848484;
+	}
+	.more-ins{
+		display: block;
+		padding: .25rem 0;
+		margin: .25rem 0 .7rem;
+		font-size: .6rem;
+	}
+	.pic-out{
+		height: 11.05rem;
+		overflow-y: hidden;
+		overflow-x: auto;
+		.pic-int{
+			height: 11.05rem;
+			width: auto;
+			white-space: nowrap;
+			img{
+				margin-right: .125rem;
+				height: 11rem;
+			}
+		}
+	}
+}
+.game-down{
+	// position: fixed;
+	// bottom: 0;
+	// z-index: 100;
+	width:18.75rem;
+	max-width: 750px;
+	min-width: 320px;
+	margin:0 auto;
+	padding: .4rem 0;
+	text-align: center;
+	border-top: 1px solid #d6d6d6;
+	background: #EFEFEF;
+	.down-btn{
+		display: inline-block;
+		width:15.2rem;
+		padding: .25rem 0;
+		font-size: .75rem;
+		letter-spacing: 1px;
+		color: white;
+		border-radius:6px;
+		background: $red;
 	}
 }
 

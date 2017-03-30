@@ -38,6 +38,30 @@
                 "env": 1,
                 "new_app_recommend": 1,
                 "category_name": "角色"
+            },
+            {
+                "category_id": 1,
+                "id": 100041,
+                "name": "烈火荣耀",
+                "icon_url": "http://img01.starjoys.com/p_upload/2017/0103/1483411524975736.jpg",
+                "short_desc": "回归经典，十年怀旧",
+                "andriod_url": "http://down.lhry.resources.3737.com/lhry_m3737_11_201611141735.apk",
+                "ios_url": "https://itunes.apple.com/cn/app/lie-huo-rong-yao-fu-gu76wan/id1119873318?mt=8",
+                "env": 1,
+                "new_app_recommend": 1,
+                "category_name": "角色"
+            },
+            {
+                "category_id": 1,
+                "id": 100041,
+                "name": "烈火荣耀",
+                "icon_url": "http://img01.starjoys.com/p_upload/2017/0103/1483411524975736.jpg",
+                "short_desc": "回归经典，十年怀旧",
+                "andriod_url": "http://down.lhry.resources.3737.com/lhry_m3737_11_201611141735.apk",
+                "ios_url": "https://itunes.apple.com/cn/app/lie-huo-rong-yao-fu-gu76wan/id1119873318?mt=8",
+                "env": 1,
+                "new_app_recommend": 1,
+                "category_name": "角色"
             }
         ]
     }

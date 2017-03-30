@@ -4,7 +4,7 @@
 		<transition name="myFade" mode="out-in">
 			<router-view></router-view>
 		</transition>
-		<comFooter v-bind:nowPage="$route.name"></comFooter>
+		<comFooter v-show="isBotShow" v-bind:nowPage="$route.name"></comFooter>
 	</div>
 </template>
 
@@ -17,7 +17,8 @@ import Footer from './components/com/footer.vue'
 import './css/app.scss'
 
 var data = {
-	page: 'page1'
+	page: 'page1',
+	isBotShow: true
 }
 export default {
 	data(){
