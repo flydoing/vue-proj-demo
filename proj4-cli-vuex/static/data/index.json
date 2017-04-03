@@ -1,0 +1,68 @@
+{
+    "state": 1,
+    "msg": "",
+    "data": {
+        "newGame": [
+            {
+                "category_id": 3,
+                "id": 100048,
+                "name": "盗墓笔记",
+                "icon_url": "http://img01.starjoys.com/p_upload/2017/0103/1483411875926183.jpg",
+                "short_desc": "用我一生，换你十年天真无邪",
+                "andriod_url": "http://dmbj.resources.eazifun.com/android/TTGW_dmbj.apk",
+                "ios_url": "https://itunes.apple.com/cn/app/dao-mu-bi-ji-zheng-ban-shou-quan/id914399667?mt=8",
+                "env": 1,
+                "new_app_recommend": 1,
+                "category_name": "卡牌"
+            },
+            {
+                "category_id": 2,
+                "id": 100047,
+                "name": "刀锋无双",
+                "icon_url": "http://img01.starjoys.com/p_upload/2017/0104/1483497290650733.png",
+                "short_desc": "呼朋唤友，携手共战",
+                "andriod_url": "http://xgamenet.oss-cn-qingdao.aliyuncs.com/package/dfws/2_4_0/DFWS_IPay.apk",
+                "ios_url": "https://itunes.apple.com/cn/app/dao-feng-wu-shuang/id996009814?mt=8",
+                "env": 1,
+                "new_app_recommend": 1,
+                "category_name": "动作"
+            },
+            {
+                "category_id": 1,
+                "id": 100041,
+                "name": "烈火荣耀",
+                "icon_url": "http://img01.starjoys.com/p_upload/2017/0103/1483411524975736.jpg",
+                "short_desc": "回归经典，十年怀旧",
+                "andriod_url": "http://down.lhry.resources.3737.com/lhry_m3737_11_201611141735.apk",
+                "ios_url": "https://itunes.apple.com/cn/app/lie-huo-rong-yao-fu-gu76wan/id1119873318?mt=8",
+                "env": 1,
+                "new_app_recommend": 1,
+                "category_name": "角色"
+            },
+            {
+                "category_id": 1,
+                "id": 100041,
+                "name": "烈火荣耀",
+                "icon_url": "http://img01.starjoys.com/p_upload/2017/0103/1483411524975736.jpg",
+                "short_desc": "回归经典，十年怀旧",
+                "andriod_url": "http://down.lhry.resources.3737.com/lhry_m3737_11_201611141735.apk",
+                "ios_url": "https://itunes.apple.com/cn/app/lie-huo-rong-yao-fu-gu76wan/id1119873318?mt=8",
+                "env": 1,
+                "new_app_recommend": 1,
+                "category_name": "角色"
+            },
+            {
+                "category_id": 1,
+                "id": 100041,
+                "name": "烈火荣耀",
+                "icon_url": "http://img01.starjoys.com/p_upload/2017/0103/1483411524975736.jpg",
+                "short_desc": "回归经典，十年怀旧",
+                "andriod_url": "http://down.lhry.resources.3737.com/lhry_m3737_11_201611141735.apk",
+                "ios_url": "https://itunes.apple.com/cn/app/lie-huo-rong-yao-fu-gu76wan/id1119873318?mt=8",
+                "env": 1,
+                "new_app_recommend": 1,
+                "category_name": "角色"
+            }
+        ]
+    }
+}
