@@ -1,8 +1,5 @@
 <template>
   <div class="page">
-    <!-- <h1>{{data}} {{reverseData}}</h1> -->
-    <!-- <div v-on:click="getdataNewGame">点击</div> -->
-    <!-- <div>{{data}}</div> -->
     <ul class="newGame">
 		<li class="game-li" v-for="game in dataNewGame">
 			<router-link class="game-one" v-bind:to="{ name: 'page5', params: { id: game.id }}">
@@ -27,12 +24,6 @@
 </template>
 
 <script>
-	//main.js
-	// import Vue from 'vue'
-	// import VueResource from 'vue-resource'
-	// Vue.use(VueResource)
-	// import axios from 'axios'
-	// Vue.prototype.$http = axios
 
 	export default{
 		data(){
@@ -43,9 +34,7 @@
 		},
 		created(){
 			this.getdataNewGame();
-			// console.log(this.getStore)
 			this.$store.commit('changeBottom', true)
-    		console.log(this.$store.getters.getNowBottom);
 		},
 		computed:{
 			reverseData: function(){
@@ -59,11 +48,7 @@
 			getdataNewGame: function(){
 				var instance = this;
 				this.$http.get('./static/data/index.json').then((response) => {
-				// axios.get('./static/data/index.json').then((response) => {
-						console.log(response.data);
-					    // console.log(response.body.data.newGame);
 					    instance.dataNewGame = response.data.data.newGame;
-					    console.log(instance.dataNewGame);
 					}, (response) => {
 					    // error callback
 					});
