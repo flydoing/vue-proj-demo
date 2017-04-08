@@ -34,7 +34,7 @@ import Child1 from '../components/childs/child1.vue'
 import Child2 from '../components/childs/child2.vue'
 
 export default new VueRouter({
-	routes:[
+	routes: [
 		{ path: '/', redirect: '/page1', component: App,
 			children: [
 				{ path: 'page1', name: 'page1', component: Page1 },
