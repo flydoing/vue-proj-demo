@@ -8,3 +8,5 @@ const app = new Vue({
   router,
   store
 }).$mount('#app')
+
+export default app

@@ -6,7 +6,7 @@ import App from '../App.vue'
 
 export default new VueRouter({
   routes: [
-    {path: '/', redirect: '/', component: App}
+    {path: '/', component: App}
   ],
-  linkActiveClass:'footer-act'
+  linkActiveClass: 'footer-act'
 })
