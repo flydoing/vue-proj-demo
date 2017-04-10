@@ -22,6 +22,7 @@ module.exports = {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
+      // 'vue$': 'vue/dist/vue.common.js',   //改为独立构建
       '@': resolve('src')
     }
   },
@@ -36,31 +37,34 @@ module.exports = {
           formatter: require('eslint-friendly-formatter')
         }
       },
-      // {
-      //   test: /\.vue$/,
-      //   loader: 'vue-loader',
-      //   options: {
-      //     loaders: {
-      //       // Since sass-loader (weirdly) has SCSS as its default parse mode, we map
-      //       // the "scss" and "sass" values for the lang attribute to the right configs here.
-      //       // other preprocessors should work out of the box, no loader config like this necessary.
-      //       'scss': 'vue-style-loader!css-loader!sass-loader',
-      //       'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax'
-      //     }
-      //     // other vue-loader options go here
-      //   }
-      // },
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader',
+        options: {
+          loaders: {
+            // Since sass-loader (weirdly) has SCSS as its default parse mode, we map
+            // the "scss" and "sass" values for the lang attribute to the right configs here.
+            // other preprocessors should work out of the box, no loader config like this necessary.
+            'scss': 'vue-style-loader!css-loader!sass-loader',
+            'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax'
+          }
+          // other vue-loader options go here
+        }
+        // test: /\.vue$/,
+        // loader: 'vue-loader',
+        // options: vueLoaderConfig
+      }, //报错，no
       // {
       //     test: /\.scss$/,
       //     exclude: /node_modules/,
       //     // loaders: ["css", "sass"]//已经不允许省略loader
       //     loaders: ["style-loader", "css-loader", "sass-loader"]
       // },
-      {
-        test: /\.vue$/,
-        loader: 'vue-loader',
-        options: vueLoaderConfig
-      },
+      // {
+      //   test: /\.vue$/,
+      //   loader: 'vue-loader',
+      //   options: vueLoaderConfig
+      // },
       {
         test: /\.js$/,
         loader: 'babel-loader',
