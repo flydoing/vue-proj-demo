@@ -1,10 +1,27 @@
 <template>
   <div class="s-header">
-      <a class="left" href="javascript:;">左侧</a>
+      <a class="left" @click="showSideBar" href="javascript:;">左侧</a>
       <a class="right" href="javascript:;">右侧</a>
       <h4 class="center">标题居中长度自适应</h4>
   </div>
 </template>
+
+<script>
+  export default {
+    data () {
+      return {}
+    },
+    methods: {
+      showSideBar () {
+        return this.$store.dispatch('changeSideBarState', true)
+        // return this.$store.commit('changeSideBarState', true)
+      },
+      hideSideBar () {
+        return this.$store.dispatch('changeSideBarState', false)
+      }
+    }
+  }
+</script>
 
 <style lang="scss" scope>
   .s-header{

@@ -3,16 +3,25 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
-    hasBottom: true
+    sideBarState: false
   },
   mutations: {
-    changeBottom (state, boolean) {
-      state.hasBottom = boolean
+    changeSideBarState (state, boolean) {
+      state.sideBarState = boolean
+    }
+  },
+  actions: {
+    // changeSideBarState (context, status) {
+    //   context.commit('changeSideBarState', status)
+    // }
+    // es6解构写法
+    changeSideBarState ({commit}, status) {
+      commit('changeSideBarState', status)
     }
   },
   getters: {
-    getNowBottom (state) {
-      return state.hasBottom
+    getSideBarState (state) {
+      return state.sideBarState
     }
   }
 })

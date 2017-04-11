@@ -1,7 +1,7 @@
 <template>
   <div class="shop">
     <comHeader></comHeader>
-    <comSidebar></comSidebar>
+    <comSidebar v-show="sideBarState"></comSidebar>
   </div>
 </template>
 
@@ -18,6 +18,17 @@
     components: {
       comHeader: comHeader,
       comSidebar: comSidebar
+    },
+    computed: {
+      sideBarState () {
+        return this.$store.getters.getSideBarState
+      }
     }
   }
 </script>
+
+<style lang="scss" scope>
+  .shop{
+    transition: all ease 0.5s;
+  }
+</style>
