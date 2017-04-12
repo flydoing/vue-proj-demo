@@ -2,6 +2,7 @@
   <div class="shop">
     <comHeader></comHeader>
     <comSidebar v-show="sideBarState"></comSidebar>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -28,7 +29,7 @@
 </script>
 
 <style lang="scss" scope>
-  .shop{
-    transition: all ease 0.5s;
-  }
+  // .shop{
+  //   transition: all ease 0.5s;
+  // }
 </style>
