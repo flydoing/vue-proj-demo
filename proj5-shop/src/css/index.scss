@@ -1,0 +1,110 @@
+.s-index{
+  position: relative;
+  background: #ffffff;
+}
+.cont{
+  .cont-head{
+    height: 2rem;
+    line-height: 2rem;
+    font-size: .7rem;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    &:before{
+      content: '';
+      width: 1px;
+      height: 100%;
+      margin-right: .125rem;
+      border-right: 5px solid #282828;
+    }
+    .head-title{
+      // font-size: .4rem;
+    }
+    .head-right{
+      float: right;
+      // font-size: .4rem;
+    }
+  }
+  .cont-main{
+    .name{
+      font-size: .7rem;
+    }
+    .desc{
+      font-size: .6rem;
+      color: #666;
+    }
+  }
+}
+.cont-temai{
+  overflow: hidden;
+  padding: .375rem 0;
+  text-align: center;
+  .cont-one{
+    float: left;
+    width: 33%;
+    overflow: hidden;
+    border-right: 1px solid #eee;
+    span{
+      display: block;
+    }
+    .desc{
+      margin: .125rem 0 .25rem;
+    }
+    .pic{
+      width: 80%;
+    }
+  }
+  &>:last-child{
+    border-right: none;
+  }
+}
+.cont-rexiao{
+  height: 9rem;
+  overflow: hidden;
+  text-align: center;
+  .cont-left{
+    float: left;
+    width: 6rem;
+    height: 8.6rem;
+    padding: 0.2rem;
+    border-right: 1px solid #eee;
+    span{
+      display: block;
+    }
+    .desc{
+      margin: .125rem 0 .25rem;
+    }
+    .pic{
+      width: 5rem;
+      height: 6rem;
+    }
+  }
+  .cont-right{
+    float: left;
+    width: 9.4rem;
+    height: 9rem;
+    &>:first-child{
+      border-bottom: 1px solid #eee;
+    }
+    .cont-right-one{
+      display: block;
+      height: 4.1rem;
+      padding: 0.2rem;
+      .text{
+        float: left;
+        width: 4.4rem;
+        text-align: right;
+        span{
+          display: block;
+        }
+        .name{
+          margin: .85rem 0 .125rem;
+        }
+      }
+      .pic{
+        float: right;
+        width: 4.1rem;
+        height: 4.1rem;
+      }
+    }
+  }
+}
