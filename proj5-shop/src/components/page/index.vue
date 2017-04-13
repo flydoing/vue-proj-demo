@@ -1,6 +1,9 @@
 <template>
   <div class="s-index">
     index.vue
+    <div class="slider">slider</div>
+    <div class="cont">cont</div>
+    <div class="cont">cont</div>
   </div>
 </template>
 
