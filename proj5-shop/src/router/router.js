@@ -4,6 +4,7 @@ Vue.use(VueRouter)
 
 import App from '../App.vue'
 import Index from '../components/page/index.vue'
+import Cate from '../components/cate/cate.vue'
 import Center from '../components/center/center.vue'
 
 export default new VueRouter({
@@ -14,6 +15,7 @@ export default new VueRouter({
       component: App,
       children: [
         {path: 'index', name: 'index', component: Index},
+        {path: 'cate', name: 'cate', component: Cate},
         {path: 'center', name: 'center', component: Center}
       ]
     }

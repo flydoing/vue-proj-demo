@@ -1,6 +1,6 @@
 <template>
   <div class="s-center">
-    center.vue
+    cate.vue
   </div>
 </template>
 
@@ -10,7 +10,7 @@
       return {}
     },
     created () {
-      this.$store.dispatch('changeHeaderTitle', '我的')
+      this.$store.dispatch('changeHeaderTitle', '分类')
     },
     methods: {
       showSideBar () {

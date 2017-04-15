@@ -4,8 +4,9 @@
       <div class="overlay" v-show="show">
         <transition name="sideBar" mode="">
           <ul class="ul-nav" v-show="show">
-            <li><router-link to="/index"><span>网站首页</span><i>></i></router-link></li>
-            <li><router-link to="/center"><span>个人中心</span><i>></i></router-link></li>
+            <li><router-link to="/index"><span>首页</span><i>></i></router-link></li>
+            <li><router-link to="/cate"><span>分类</span><i>></i></router-link></li>
+            <li><router-link to="/center"><span>我的</span><i>></i></router-link></li>
             <!-- <li><a href="javascript:;"><span>首页</span><i>></i></a></li>
             <li><a href="javascript:;"><span>首页</span><i>></i></a></li>
             <li><a href="javascript:;"><span>首页</span><i>></i></a></li>
