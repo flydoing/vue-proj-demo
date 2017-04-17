@@ -5,7 +5,8 @@
     <div class="cont">
       <p class="cont-head">
         <span class="head-title">特卖</span>
-        <a class="head-right" >更多></a>
+        <!-- <a class="head-right" >更多></a> -->
+        <router-link to="/cate" class="head-right">更多 ></router-link>
       </p>
       <div class="cont-main cont-temai">
         <a class="cont-one" href="javascript:;">
@@ -29,7 +30,8 @@
     <div class="cont">
       <p class="cont-head">
         <span class="head-title">热销</span>
-        <a class="head-right" >更多></a>
+        <!-- <a class="head-right" >更多></a> -->
+        <router-link to="/cate" class="head-right">更多 ></router-link>
       </p>
       <div class="cont-main cont-rexiao">
         <a class="cont-left" href="javascript:;">
@@ -59,7 +61,8 @@
     <div class="cont">
       <p class="cont-head">
         <span class="head-title">特卖</span>
-        <a class="head-right" >更多></a>
+        <!-- <a class="head-right" >更多></a> -->
+        <router-link to="/cate" class="head-right">更多 ></router-link>
       </p>
       <div class="cont-main cont-jingpin">
         <ul>

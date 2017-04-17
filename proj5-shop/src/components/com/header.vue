@@ -1,7 +1,7 @@
 <template>
   <div class="s-header">
       <a class="left" @click="showSideBar" href="javascript:;">导航</a>
-      <a class="right" href="javascript:;">右侧</a>
+      <a class="right" @click="goBack" href="javascript:;">后退</a>
       <h4 class="center">{{headerTitle}}</h4>
   </div>
 </template>
@@ -23,6 +23,9 @@
       },
       hideSideBar () {
         return this.$store.dispatch('changeSideBarState', false)
+      },
+      goBack () {
+        this.$router.go(-1)
       }
     }
   }
