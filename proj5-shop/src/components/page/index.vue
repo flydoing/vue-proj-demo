@@ -108,10 +108,13 @@
 
   export default {
     data () {
-      return {}
+      return {
+        dataIndex: {}
+      }
     },
     created () {
       this.$store.dispatch('changeHeaderTitle', '首页')
+      this.getDataIndex()
     },
     methods: {
       showSideBar () {
@@ -120,6 +123,14 @@
       },
       hideSideBar () {
         return this.$store.dispatch('changeSideBarState', false)
+      },
+      getDataIndex () {
+        this.$http.get('../../static/data/index.json').then((response) => {
+          this.dataIndex = response.data
+          console.log(this.dataIndex)
+        }, (response) => {
+          // error
+        })
       }
     }
   }

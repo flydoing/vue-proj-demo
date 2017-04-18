@@ -1,0 +1,75 @@
+{
+    "state": 1,
+    "msg": "success",
+    "data": {
+        "rexiao": [
+            {
+                "id": 100048,
+                "brand_price": 99.9,
+                "brand_name": "商品名字",
+                "brand_desc": "商品描述商品描述",
+                "brand_pic_url": "https://m.360buyimg.com/mobilecms/s357x458_jfs/t5020/152/1113560747/913290/159da6e1/58ecabd0Nb170698c.jpg!cc_357x458!q50.jpg"
+            },
+            {
+                "id": 100047,
+                "brand_price": 99.9,
+                "brand_name": "商品名字",
+                "brand_desc": "商品描述商品描述",
+                "brand_pic_url": "https://m.360buyimg.com/mobilecms/s357x458_jfs/t5020/152/1113560747/913290/159da6e1/58ecabd0Nb170698c.jpg!cc_357x458!q50.jpg"
+            },
+            {
+                "id": 100041,
+                "brand_price": 99.9,
+                "brand_name": "商品名字",
+                "brand_desc": "商品描述商品描述",
+                "brand_pic_url": "https://m.360buyimg.com/mobilecms/s357x458_jfs/t5020/152/1113560747/913290/159da6e1/58ecabd0Nb170698c.jpg!cc_357x458!q50.jpg"
+            }
+        ],
+        "temai": [
+            {
+                "id": 100048,
+                "brand_price": 99.9,
+                "brand_name": "商品名字",
+                "brand_desc": "商品描述商品描述",
+                "brand_pic_url": "https://m.360buyimg.com/mobilecms/s357x458_jfs/t5020/152/1113560747/913290/159da6e1/58ecabd0Nb170698c.jpg!cc_357x458!q50.jpg"
+            },
+            {
+                "id": 100047,
+                "brand_price": 99.9,
+                "brand_name": "商品名字",
+                "brand_desc": "商品描述商品描述",
+                "brand_pic_url": "https://m.360buyimg.com/mobilecms/s357x458_jfs/t5020/152/1113560747/913290/159da6e1/58ecabd0Nb170698c.jpg!cc_357x458!q50.jpg"
+            },
+            {
+                "id": 100041,
+                "brand_price": 99.9,
+                "brand_name": "商品名字",
+                "brand_desc": "商品描述商品描述",
+                "brand_pic_url": "https://m.360buyimg.com/mobilecms/s357x458_jfs/t5020/152/1113560747/913290/159da6e1/58ecabd0Nb170698c.jpg!cc_357x458!q50.jpg"
+            }
+        ],
+        "jingpin": [
+            {
+                "id": 100048,
+                "brand_price": 99.9,
+                "brand_name": "商品名字",
+                "brand_desc": "商品描述商品描述",
+                "brand_pic_url": "https://m.360buyimg.com/mobilecms/s357x458_jfs/t5020/152/1113560747/913290/159da6e1/58ecabd0Nb170698c.jpg!cc_357x458!q50.jpg"
+            },
+            {
+                "id": 100047,
+                "brand_price": 99.9,
+                "brand_name": "商品名字",
+                "brand_desc": "商品描述商品描述",
+                "brand_pic_url": "https://m.360buyimg.com/mobilecms/s357x458_jfs/t5020/152/1113560747/913290/159da6e1/58ecabd0Nb170698c.jpg!cc_357x458!q50.jpg"
+            },
+            {
+                "id": 100041,
+                "brand_price": 99.9,
+                "brand_name": "商品名字",
+                "brand_desc": "商品描述商品描述",
+                "brand_pic_url": "https://m.360buyimg.com/mobilecms/s357x458_jfs/t5020/152/1113560747/913290/159da6e1/58ecabd0Nb170698c.jpg!cc_357x458!q50.jpg"
+            }
+        ]
+    }
+}
