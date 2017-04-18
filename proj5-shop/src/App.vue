@@ -2,7 +2,7 @@
   <div class="shop">
     <comHeader></comHeader>
     <comSidebar v-show="sideBarState"></comSidebar>
-    <router-view></router-view>
+    <keep-alive><router-view></router-view></keep-alive>
   </div>
 </template>
 
