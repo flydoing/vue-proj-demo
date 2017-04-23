@@ -1,6 +1,6 @@
 <template>
   <div class="s-index">
-    <div class="slider">slider</div>
+    <comSwiper></comSwiper>
 
     <div class="cont">
       <p class="cont-head">
@@ -11,17 +11,17 @@
       <div class="cont-main cont-temai">
         <a class="cont-one" href="javascript:;">
           <span class="name">商品名称</span>
-          <span class="desc">简单介绍说明</span>
+          <span class="price">$99.99</span>
           <img class="pic" src="https://m.360buyimg.com/mobilecms/s357x458_jfs/t5020/152/1113560747/913290/159da6e1/58ecabd0Nb170698c.jpg!cc_357x458!q50.jpg"/>
         </a>
         <a class="cont-one" href="javascript:;">
           <span class="name">商品名称</span>
-          <span class="desc">简单介绍说明</span>
+          <span class="price">$99.99</span>
           <img class="pic" src="https://m.360buyimg.com/mobilecms/s357x458_jfs/t5020/152/1113560747/913290/159da6e1/58ecabd0Nb170698c.jpg!cc_357x458!q50.jpg"/>
         </a>
         <a class="cont-one" href="javascript:;">
           <span class="name">商品名称</span>
-          <span class="desc">简单介绍说明</span>
+          <span class="price">$99.99</span>
           <img class="pic" src="https://m.360buyimg.com/mobilecms/s357x458_jfs/t5020/152/1113560747/913290/159da6e1/58ecabd0Nb170698c.jpg!cc_357x458!q50.jpg"/>
         </a>
       </div>
@@ -103,7 +103,7 @@
 </template>
 
 <script>
-
+  import comSwiper from '../com/swiper'
   import '../../css/index.scss'
 
   export default {
@@ -111,6 +111,9 @@
       return {
         dataIndex: {}
       }
+    },
+    components: {
+      comSwiper: comSwiper
     },
     created () {
       this.$store.dispatch('changeHeaderTitle', '首页')
