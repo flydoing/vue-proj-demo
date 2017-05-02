@@ -7,6 +7,7 @@
             <li><router-link to="/index"><span>首页</span><i>></i></router-link></li>
             <li><router-link to="/cate"><span>分类</span><i>></i></router-link></li>
             <li><router-link to="/center"><span>我的</span><i>></i></router-link></li>
+            <li><router-link to="/cart"><span>购物车</span><i>></i></router-link></li>
             <!-- <li><a href="javascript:;"><span>首页</span><i>></i></a></li>
             <li><a href="javascript:;"><span>首页</span><i>></i></a></li>
             <li><a href="javascript:;"><span>首页</span><i>></i></a></li>

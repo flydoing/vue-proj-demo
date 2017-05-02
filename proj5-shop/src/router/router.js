@@ -6,6 +6,7 @@ import App from '../App.vue'
 import Index from '../components/page/index.vue'
 import Cate from '../components/cate/cate.vue'
 import Center from '../components/center/center.vue'
+import Cart from '../components/cart/cart.vue'
 
 export default new VueRouter({
   routes: [
@@ -16,7 +17,8 @@ export default new VueRouter({
       children: [
         {path: 'index', name: 'index', component: Index},
         {path: 'cate', name: 'cate', component: Cate},
-        {path: 'center', name: 'center', component: Center}
+        {path: 'center', name: 'center', component: Center},
+        {path: 'cart', name: 'cart', component: Cart}
       ]
     }
   ],
