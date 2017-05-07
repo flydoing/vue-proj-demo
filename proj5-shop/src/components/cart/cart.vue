@@ -2,52 +2,20 @@
   <div class="s-cart">
     <div class="cart-cont">
       <ul>
-        <li class="cont-one">
-          <input class="goods-checkbox" type="checkbox">
+        <li class="cont-one" v-for="cart in carts">
+          <input class="goods-checkbox" type="checkbox" v-model="cart.isSelect">
           <a class="goods-a" href="javascript:;">
-            <img class="goods-img" src="https://m.360buyimg.com/mobilecms/s357x458_jfs/t5020/152/1113560747/913290/159da6e1/58ecabd0Nb170698c.jpg!cc_357x458!q50.jpg">
+            <img class="goods-img" :src="cart.cart_img">
           </a>
           <div class="goods-info">
-            <h5 class="goods-name">【橘子美衣】今年必备长款</h5>
+            <h5 class="goods-name">{{cart.cart_name}}</h5>
             <div class="goods-counter">
               <a href="javascript:;" class="btn-sub"> - </a>
-              <input type="text" class="goods-num" readyonly="">
+              <input type="text" class="goods-num" readonly="readonly" v-model="cart.cart_num">
               <a href="javascript:;" class="btn-add"> + </a>
             </div>
           </div>
-          <span class="goods-price">￥139.30</span>
-          <a class="goods-delete" href="javascript:;">删除</a>
-        </li>
-        <li class="cont-one">
-          <input class="goods-checkbox" type="checkbox">
-          <a class="goods-a" href="javascript:;">
-            <img class="goods-img" src="https://m.360buyimg.com/mobilecms/s357x458_jfs/t5020/152/1113560747/913290/159da6e1/58ecabd0Nb170698c.jpg!cc_357x458!q50.jpg">
-          </a>
-          <div class="goods-info">
-            <h5 class="goods-name">【橘子美衣】今年必备长款</h5>
-            <div class="goods-counter">
-              <a href="javascript:;" class="btn-sub"> - </a>
-              <input type="text" class="goods-num" readyonly="">
-              <a href="javascript:;" class="btn-add"> + </a>
-            </div>
-          </div>
-          <span class="goods-price">￥139.30</span>
-          <a class="goods-delete" href="javascript:;">删除</a>
-        </li>
-        <li class="cont-one">
-          <input class="goods-checkbox" type="checkbox">
-          <a class="goods-a" href="javascript:;">
-            <img class="goods-img" src="https://m.360buyimg.com/mobilecms/s357x458_jfs/t5020/152/1113560747/913290/159da6e1/58ecabd0Nb170698c.jpg!cc_357x458!q50.jpg">
-          </a>
-          <div class="goods-info">
-            <h5 class="goods-name">【橘子美衣】今年必备长款【橘子美衣】今年必备长款</h5>
-            <div class="goods-counter">
-              <a href="javascript:;" class="btn-sub"> - </a>
-              <input type="text" class="goods-num" readyonly="">
-              <a href="javascript:;" class="btn-add"> + </a>
-            </div>
-          </div>
-          <span class="goods-price">￥139.30</span>
+          <span class="goods-price">￥{{cart.cart_price}}</span>
           <a class="goods-delete" href="javascript:;">删除</a>
         </li>
       </ul>
@@ -70,27 +38,11 @@
 
   import '../../css/cart.scss'
 
-  // export default {
-  //   data () {
-  //     return {}
-  //   },
-  //   created () {
-  //     this.$store.dispatch('changeHeaderTitle', '购物车')
-  //   },
-  //   methods: {
-  //     showSideBar () {
-  //       return this.$store.dispatch('changeSideBarState', true)
-  //       // return this.$store.commit('changeSideBarState', true)
-  //     },
-  //     hideSideBar () {
-  //       return this.$store.dispatch('changeSideBarState', false)
-  //     }
-  //   }
-  // }
   export default {
     data () {
       return {
-        dataCart: {}
+        dataCart: {},
+        carts: {}
       }
     },
     created () {
@@ -108,7 +60,8 @@
       getDataCart () {
         this.$http.get('../../static/data/cart.json').then((response) => {
           this.dataCart = response.data
-          console.log(this.dataCart)
+          this.carts = this.dataCart.data.carts
+          console.log(this.carts)
         }, (response) => {
           // error
         })
