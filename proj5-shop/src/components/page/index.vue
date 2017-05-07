@@ -9,7 +9,12 @@
         <router-link to="/cate" class="head-right">更多 ></router-link>
       </p>
       <div class="cont-main cont-temai">
-        <a class="cont-one" href="javascript:;">
+        <a class="cont-one" href="javascript:;" v-for="brand in temai">
+          <span class="name">{{brand.brand_name}}</span>
+          <span class="price">￥{{brand.brand_price}}</span>
+          <img class="pic" :src="brand.brand_pic_url"/>
+        </a>
+        <!-- <a class="cont-one" href="javascript:;">
           <span class="name">商品名称</span>
           <span class="price">$99.99</span>
           <img class="pic" src="https://m.360buyimg.com/mobilecms/s357x458_jfs/t5020/152/1113560747/913290/159da6e1/58ecabd0Nb170698c.jpg!cc_357x458!q50.jpg"/>
@@ -23,7 +28,7 @@
           <span class="name">商品名称</span>
           <span class="price">$99.99</span>
           <img class="pic" src="https://m.360buyimg.com/mobilecms/s357x458_jfs/t5020/152/1113560747/913290/159da6e1/58ecabd0Nb170698c.jpg!cc_357x458!q50.jpg"/>
-        </a>
+        </a> -->
       </div>
     </div>
 
@@ -34,13 +39,24 @@
         <router-link to="/cate" class="head-right">更多 ></router-link>
       </p>
       <div class="cont-main cont-rexiao">
-        <a class="cont-left" href="javascript:;">
-          <span class="name">商品名称</span>
-          <span class="desc">简单介绍说明</span>
-          <img class="pic" src="https://m.360buyimg.com/mobilecms/s357x458_jfs/t5020/152/1113560747/913290/159da6e1/58ecabd0Nb170698c.jpg!cc_357x458!q50.jpg"/>
+        <a class="cont-left" href="javascript:;"
+            v-for="(brand, key, index) in rexiao"
+            v-if="key==0">
+          <span class="name">{{brand.brand_name}}</span>
+          <span class="desc">{{brand.brand_desc}}</span>
+          <img class="pic" :src="brand.brand_pic_url"/>
         </a>
         <div class="cont-right">
-          <a class="cont-right-one" href="javascript:;">
+          <a class="cont-right-one" href="javascript:;"
+              v-for="(brand, key, index) in rexiao"
+              v-if="key>=1">
+            <p class="text">
+              <span class="name">{{brand.brand_name}}</span>
+              <span class="desc">{{brand.brand_desc}}</span>
+            </p>
+            <img class="pic" :src="brand.brand_pic_url"/>
+          </a>
+          <!-- <a class="cont-right-one" href="javascript:;">
             <p class="text">
               <span class="name">商品名称</span>
               <span class="desc">简单介绍说明</span>
@@ -53,20 +69,27 @@
               <span class="desc">简单介绍说明</span>
             </p>
             <img class="pic" src="https://m.360buyimg.com/mobilecms/s357x458_jfs/t5020/152/1113560747/913290/159da6e1/58ecabd0Nb170698c.jpg!cc_357x458!q50.jpg"/>
-          </a>
+          </a> -->
         </div>
       </div>
     </div>
 
     <div class="cont">
       <p class="cont-head">
-        <span class="head-title">特卖</span>
+        <span class="head-title">精品</span>
         <!-- <a class="head-right" >更多></a> -->
         <router-link to="/cate" class="head-right">更多 ></router-link>
       </p>
       <div class="cont-main cont-jingpin">
         <ul>
-          <li>
+          <li v-for="brand in jingpin">
+            <a class="cont-li" href="javascript:;">
+              <img class="pic" :src="brand.brand_pic_url"/>
+              <span class="name">{{brand.brand_name}}</span>
+              <span class="price">￥{{brand.brand_price}}</span>
+            </a>
+          </li>
+          <!-- <li>
             <a class="cont-li" href="javascript:;">
               <img class="pic" src="https://m.360buyimg.com/mobilecms/s357x458_jfs/t5020/152/1113560747/913290/159da6e1/58ecabd0Nb170698c.jpg!cc_357x458!q50.jpg"/>
               <span class="name">商品名称</span>
@@ -86,14 +109,7 @@
               <span class="name">商品名称</span>
               <span class="price">￥99.99</span>
             </a>
-          </li>
-          <li>
-            <a class="cont-li" href="javascript:;">
-              <img class="pic" src="https://m.360buyimg.com/mobilecms/s357x458_jfs/t5020/152/1113560747/913290/159da6e1/58ecabd0Nb170698c.jpg!cc_357x458!q50.jpg"/>
-              <span class="name">商品名称</span>
-              <span class="price">￥99.99</span>
-            </a>
-          </li>
+          </li> -->
         </ul>
       </div>
     </div>
@@ -109,7 +125,10 @@
   export default {
     data () {
       return {
-        dataIndex: {}
+        dataIndex: {},
+        temai: {},
+        rexiao: {},
+        jingpin: {}
       }
     },
     components: {
@@ -130,7 +149,10 @@
       getDataIndex () {
         this.$http.get('../../static/data/index.json').then((response) => {
           this.dataIndex = response.data
-          console.log(this.dataIndex)
+          this.temai = this.dataIndex.data.temai
+          this.rexiao = this.dataIndex.data.rexiao
+          this.jingpin = this.dataIndex.data.jingpin
+          console.log(this.rexiao)
         }, (response) => {
           // error
         })

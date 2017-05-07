@@ -70,12 +70,32 @@
 
   import '../../css/cart.scss'
 
+  // export default {
+  //   data () {
+  //     return {}
+  //   },
+  //   created () {
+  //     this.$store.dispatch('changeHeaderTitle', '购物车')
+  //   },
+  //   methods: {
+  //     showSideBar () {
+  //       return this.$store.dispatch('changeSideBarState', true)
+  //       // return this.$store.commit('changeSideBarState', true)
+  //     },
+  //     hideSideBar () {
+  //       return this.$store.dispatch('changeSideBarState', false)
+  //     }
+  //   }
+  // }
   export default {
     data () {
-      return {}
+      return {
+        dataCart: {}
+      }
     },
     created () {
-      this.$store.dispatch('changeHeaderTitle', '分类')
+      this.$store.dispatch('changeHeaderTitle', '购物车')
+      this.getDataCart()
     },
     methods: {
       showSideBar () {
@@ -84,6 +104,14 @@
       },
       hideSideBar () {
         return this.$store.dispatch('changeSideBarState', false)
+      },
+      getDataCart () {
+        this.$http.get('../../static/data/cart.json').then((response) => {
+          this.dataCart = response.data
+          console.log(this.dataCart)
+        }, (response) => {
+          // error
+        })
       }
     }
   }
