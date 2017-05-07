@@ -3,110 +3,31 @@
     <div class="cate-nav">
       <div class="nav-out">
         <div class="nav">
-          <a class="nav-a" href="javascript:;">男装</a>
-          <a class="nav-a" href="javascript:;">男装</a>
-          <a class="nav-a nav-a-act" href="javascript:;">男装</a>
-          <a class="nav-a" href="javascript:;">男装</a>
-          <a class="nav-a" href="javascript:;">男装</a>
-          <a class="nav-a" href="javascript:;">男装</a>
-          <a class="nav-a" href="javascript:;">男装</a>
-          <a class="nav-a" href="javascript:;">男装</a>
-          <a class="nav-a" href="javascript:;">男装</a>
-          <a class="nav-a" href="javascript:;">男装</a>
+          <a class="nav-a" href="javascript:;"
+              v-for="(type, index) in types"
+              :class="{'nav-a-act': index==nowIndex}"
+              @click="clickType(type.type_now, index)">
+              {{type.type_name}}
+          </a>
+          <!-- <a class="nav-a" href="javascript:;" @click="clickType('type_man')">男装</a>
+          <a class="nav-a" href="javascript:;" @click="clickType('type_girl')">女装</a>
+          <a class="nav-a" href="javascript:;" @click="clickType('type_man')">男装</a>
+          <a class="nav-a" href="javascript:;" @click="clickType('type_man')">男装</a>
+          <a class="nav-a" href="javascript:;" @click="clickType('type_girl')">女装</a>
+          <a class="nav-a" href="javascript:;" @click="clickType('type_girl')">女装</a>
+          <a class="nav-a" href="javascript:;" @click="clickType('type_man')">男装</a>
+          <a class="nav-a" href="javascript:;" @click="clickType('type_man')">男装</a>
+          <a class="nav-a" href="javascript:;" @click="clickType('type_man')">男装</a> -->
         </div>
       </div>
     </div>
     <div class="cate-cont">
       <ul>
-        <li>
+        <li v-for="brand in allBrand" v-if="nowType==brand.type || nowType=='type_all'">
           <a class="cont-li" href="javascript:;">
-            <img class="pic" src="https://m.360buyimg.com/mobilecms/s357x458_jfs/t5020/152/1113560747/913290/159da6e1/58ecabd0Nb170698c.jpg!cc_357x458!q50.jpg"/>
-            <span class="name">商品名称</span>
-            <span class="price">￥99.99</span>
-          </a>
-        </li>
-        <li>
-          <a class="cont-li" href="javascript:;">
-            <img class="pic" src="https://m.360buyimg.com/mobilecms/s357x458_jfs/t5020/152/1113560747/913290/159da6e1/58ecabd0Nb170698c.jpg!cc_357x458!q50.jpg"/>
-            <span class="name">商品名称</span>
-            <span class="price">￥99.99</span>
-          </a>
-        </li>
-        <li>
-          <a class="cont-li" href="javascript:;">
-            <img class="pic" src="https://m.360buyimg.com/mobilecms/s357x458_jfs/t5020/152/1113560747/913290/159da6e1/58ecabd0Nb170698c.jpg!cc_357x458!q50.jpg"/>
-            <span class="name">商品名称</span>
-            <span class="price">￥99.99</span>
-          </a>
-        </li>
-        <li>
-          <a class="cont-li" href="javascript:;">
-            <img class="pic" src="https://m.360buyimg.com/mobilecms/s357x458_jfs/t5020/152/1113560747/913290/159da6e1/58ecabd0Nb170698c.jpg!cc_357x458!q50.jpg"/>
-            <span class="name">商品名称</span>
-            <span class="price">￥99.99</span>
-          </a>
-        </li>
-        <li>
-          <a class="cont-li" href="javascript:;">
-            <img class="pic" src="https://m.360buyimg.com/mobilecms/s357x458_jfs/t5020/152/1113560747/913290/159da6e1/58ecabd0Nb170698c.jpg!cc_357x458!q50.jpg"/>
-            <span class="name">商品名称</span>
-            <span class="price">￥99.99</span>
-          </a>
-        </li>
-        <li>
-          <a class="cont-li" href="javascript:;">
-            <img class="pic" src="https://m.360buyimg.com/mobilecms/s357x458_jfs/t5020/152/1113560747/913290/159da6e1/58ecabd0Nb170698c.jpg!cc_357x458!q50.jpg"/>
-            <span class="name">商品名称</span>
-            <span class="price">￥99.99</span>
-          </a>
-        </li>
-        <li>
-          <a class="cont-li" href="javascript:;">
-            <img class="pic" src="https://m.360buyimg.com/mobilecms/s357x458_jfs/t5020/152/1113560747/913290/159da6e1/58ecabd0Nb170698c.jpg!cc_357x458!q50.jpg"/>
-            <span class="name">商品名称</span>
-            <span class="price">￥99.99</span>
-          </a>
-        </li>
-        <li>
-          <a class="cont-li" href="javascript:;">
-            <img class="pic" src="https://m.360buyimg.com/mobilecms/s357x458_jfs/t5020/152/1113560747/913290/159da6e1/58ecabd0Nb170698c.jpg!cc_357x458!q50.jpg"/>
-            <span class="name">商品名称</span>
-            <span class="price">￥99.99</span>
-          </a>
-        </li>
-        <li>
-          <a class="cont-li" href="javascript:;">
-            <img class="pic" src="https://m.360buyimg.com/mobilecms/s357x458_jfs/t5020/152/1113560747/913290/159da6e1/58ecabd0Nb170698c.jpg!cc_357x458!q50.jpg"/>
-            <span class="name">商品名称</span>
-            <span class="price">￥99.99</span>
-          </a>
-        </li>
-        <li>
-          <a class="cont-li" href="javascript:;">
-            <img class="pic" src="https://m.360buyimg.com/mobilecms/s357x458_jfs/t5020/152/1113560747/913290/159da6e1/58ecabd0Nb170698c.jpg!cc_357x458!q50.jpg"/>
-            <span class="name">商品名称</span>
-            <span class="price">￥99.99</span>
-          </a>
-        </li>
-        <li>
-          <a class="cont-li" href="javascript:;">
-            <img class="pic" src="https://m.360buyimg.com/mobilecms/s357x458_jfs/t5020/152/1113560747/913290/159da6e1/58ecabd0Nb170698c.jpg!cc_357x458!q50.jpg"/>
-            <span class="name">商品名称</span>
-            <span class="price">￥99.99</span>
-          </a>
-        </li>
-        <li>
-          <a class="cont-li" href="javascript:;">
-            <img class="pic" src="https://m.360buyimg.com/mobilecms/s357x458_jfs/t5020/152/1113560747/913290/159da6e1/58ecabd0Nb170698c.jpg!cc_357x458!q50.jpg"/>
-            <span class="name">商品名称</span>
-            <span class="price">￥99.99</span>
-          </a>
-        </li>
-        <li>
-          <a class="cont-li" href="javascript:;">
-            <img class="pic" src="https://m.360buyimg.com/mobilecms/s357x458_jfs/t5020/152/1113560747/913290/159da6e1/58ecabd0Nb170698c.jpg!cc_357x458!q50.jpg"/>
-            <span class="name">商品名称</span>
-            <span class="price">￥99.99</span>
+            <img class="pic" :src="brand.brand_pic_url"/>
+            <span class="name">{{brand.brand_name}}</span>
+            <span class="price">{{brand.brand_price}}</span>
           </a>
         </li>
       </ul>
@@ -120,10 +41,17 @@
 
   export default {
     data () {
-      return {}
+      return {
+        nowType: 'type_all',
+        nowIndex: 0,
+        types: {},
+        dataCate: {},
+        allBrand: {}
+      }
     },
     created () {
       this.$store.dispatch('changeHeaderTitle', '分类')
+      this.getDataCate()
     },
     methods: {
       showSideBar () {
@@ -132,6 +60,21 @@
       },
       hideSideBar () {
         return this.$store.dispatch('changeSideBarState', false)
+      },
+      getDataCate () {
+        this.$http.get('../../static/data/cate.json').then((response) => {
+          this.dataCate = response.data
+          console.log(this.dataCate)
+          this.types = this.dataCate.data.types
+          this.allBrand = this.dataCate.data.allBrand
+          console.log(this.allBrand)
+        }, (response) => {
+          // error
+        })
+      },
+      clickType (type, index) {
+        this.nowType = type
+        this.nowIndex = index
       }
     }
   }

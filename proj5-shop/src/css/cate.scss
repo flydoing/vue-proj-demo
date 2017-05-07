@@ -10,6 +10,8 @@
     height: 8.5rem; //动态变动
     overflow-x: hidden;
     overflow-y: auto;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
     .nav-a{
       display: block;
       height: 1.5rem;
@@ -26,7 +28,6 @@
         float: left;
         width: 1px;
         height: 100%;
-        margin-left: .125rem;
         border-right: 5px solid #282828;
       }
     }
