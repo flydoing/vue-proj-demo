@@ -15,7 +15,7 @@
               <a href="javascript:;" class="btn-add"> + </a>
             </div>
           </div>
-          <span class="goods-price">￥{{cart.cart_price}}</span>
+          <span class="goods-price">￥{{cart.cart_price*cart.cart_num}}</span>
           <a class="goods-delete" href="javascript:;">删除</a>
         </li>
       </ul>
@@ -27,7 +27,7 @@
         <label for="all-goods">全选</label>
       </div>
       <div class="all-price">
-        <p class="price-p">总计 :<em class="price">￥0.00</em></p>
+        <p class="price-p">总计 :<em class="price">￥{{totalNowPrice}}</em></p>
       </div>
       <a class="btn-counter">去结算</a>
     </div>
@@ -49,6 +49,21 @@
       this.$store.dispatch('changeHeaderTitle', '购物车')
       this.getDataCart()
     },
+    computed: {
+      totalNowPrice () {
+        let price = 0
+        console.log(typeof (this.carts))
+        // this.carts.forEach(cart => {    // 可以执行，但是报错this.carts.forEach is not a function
+        Array.from(this.carts).forEach(cart => {
+        // [...this.carts].forEach(cart => {   //SyntaxError: Unexpected token
+          if (cart.isSelect) {
+            price += cart.cart_price * cart.cart_num
+          }
+        })
+        console.log(price)
+        return price
+      }
+    },
     methods: {
       showSideBar () {
         return this.$store.dispatch('changeSideBarState', true)
@@ -61,7 +76,7 @@
         this.$http.get('../../static/data/cart.json').then((response) => {
           this.dataCart = response.data
           this.carts = this.dataCart.data.carts
-          console.log(this.carts)
+          // console.log(this.carts)
         }, (response) => {
           // error
         })

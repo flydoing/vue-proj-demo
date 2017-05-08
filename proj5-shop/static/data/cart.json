@@ -8,7 +8,7 @@
             {
                 "id": 100048,
                 "type": "type_man",
-                "isSelect": true,
+                "isSelect": false,
                 "cart_img": "https://m.360buyimg.com/mobilecms/s357x458_jfs/t5020/152/1113560747/913290/159da6e1/58ecabd0Nb170698c.jpg!cc_357x458!q50.jpg",
                 "cart_name": "商品名字1",
                 "cart_num": 1,
@@ -17,16 +17,16 @@
             {
                 "id": 100048,
                 "type": "type_man",
-                "isSelect": false,
+                "isSelect": true,
                 "cart_img": "https://m.360buyimg.com/mobilecms/s357x458_jfs/t5020/152/1113560747/913290/159da6e1/58ecabd0Nb170698c.jpg!cc_357x458!q50.jpg",
                 "cart_name": "商品名字2",
-                "cart_num": 1,
+                "cart_num": 2,
                 "cart_price": 29.9
             },
             {
                 "id": 100048,
                 "type": "type_man",
-                "isSelect": true,
+                "isSelect": false,
                 "cart_img": "https://m.360buyimg.com/mobilecms/s357x458_jfs/t5020/152/1113560747/913290/159da6e1/58ecabd0Nb170698c.jpg!cc_357x458!q50.jpg",
                 "cart_name": "商品名字3",
                 "cart_num": 1,
