@@ -10,9 +10,9 @@
           <div class="goods-info">
             <h5 class="goods-name">{{cart.cart_name}}</h5>
             <div class="goods-counter">
-              <a href="javascript:;" class="btn-sub"> - </a>
+              <a href="javascript:;" class="btn-sub" @click="changeNum(-1, cart)"> - </a>
               <input type="text" class="goods-num" readonly="readonly" v-model="cart.cart_num">
-              <a href="javascript:;" class="btn-add"> + </a>
+              <a href="javascript:;" class="btn-add" @click="changeNum(1, cart)"> + </a>
             </div>
           </div>
           <span class="goods-price">￥{{cart.cart_price*cart.cart_num}}</span>
@@ -80,6 +80,17 @@
         }, (response) => {
           // error
         })
+      },
+      changeNum (change, cart) {
+        if (change === -1) {
+          if (cart.cart_num >= 2) {
+            cart.cart_num = cart.cart_num - 1
+            console.log(cart.cart_num)
+          }
+        } else {
+          cart.cart_num = cart.cart_num + 1
+          console.log(cart.cart_num)
+        }
       }
     }
   }
