@@ -3,7 +3,7 @@
     <div class="cart-cont">
       <ul>
         <li class="cont-one" v-for="cart in carts">
-          <input class="goods-checkbox" type="checkbox" v-model="cart.isSelect">
+          <input class="goods-checkbox" type="checkbox" v-model="cart.isSelect" @click="changeAllSelect">
           <a class="goods-a" href="javascript:;">
             <img class="goods-img" :src="cart.cart_img">
           </a>
@@ -23,7 +23,7 @@
 
     <div class="cart-counter">
       <div class="all-checkbox">
-        <input type="checkbox" name="all-goods" class="all-goods">
+        <input type="checkbox" name="all-goods" class="all-goods" v-model="isAllSelectState" @click="clickAllSelect">
         <label for="all-goods">全选</label>
       </div>
       <div class="all-price">
@@ -42,7 +42,8 @@
     data () {
       return {
         dataCart: {},
-        carts: {}
+        carts: {},
+        isAllSelectState: false
       }
     },
     created () {
@@ -91,6 +92,20 @@
           cart.cart_num = cart.cart_num + 1
           console.log(cart.cart_num)
         }
+      },
+      changeAllSelect () {
+        this.isAllSelectState = Array.from(this.carts).every(cart => {
+          console.log(cart.isSelect)
+          return cart.isSelect
+        })
+        // console.log(this.isAllSelectState)
+      },
+      clickAllSelect () {
+        this.isAllSelectState = !this.isAllSelectState
+        Array.from(this.carts).forEach(cart => {
+        // [...this.carts].forEach(cart => {   //SyntaxError: Unexpected token
+          cart.isSelect = this.isAllSelectState
+        })
       }
     }
   }
