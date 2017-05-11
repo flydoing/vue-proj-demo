@@ -2,8 +2,8 @@
   <div class="s-cart">
     <div class="cart-cont">
       <ul>
-        <li class="cont-one" v-for="cart in carts">
-          <input class="goods-checkbox" type="checkbox" v-model="cart.isSelect" @click="changeAllSelect">
+        <li class="cont-one" v-for="(cart, index) in carts">
+          <input class="goods-checkbox" type="checkbox" v-model="cart.isSelect" @click="clickSelect(cart)">
           <a class="goods-a" href="javascript:;">
             <img class="goods-img" :src="cart.cart_img">
           </a>
@@ -11,12 +11,12 @@
             <h5 class="goods-name">{{cart.cart_name}}</h5>
             <div class="goods-counter">
               <a href="javascript:;" class="btn-sub" @click="changeNum(-1, cart)"> - </a>
-              <input type="text" class="goods-num" readonly="readonly" v-model="cart.cart_num">
+              <input type="text" class="goods-num" readonly="readonly" v-model.lazy="cart.cart_num">
               <a href="javascript:;" class="btn-add" @click="changeNum(1, cart)"> + </a>
             </div>
           </div>
           <span class="goods-price">￥{{cart.cart_price*cart.cart_num}}</span>
-          <a class="goods-delete" href="javascript:;">删除</a>
+          <a class="goods-delete" href="javascript:;" @click="delectCart(index, carts)">删除</a>
         </li>
       </ul>
     </div>
@@ -93,11 +93,13 @@
           console.log(cart.cart_num)
         }
       },
-      changeAllSelect () {
-        this.isAllSelectState = Array.from(this.carts).every(cart => {
+      clickSelect (cart) {
+        cart.isSelect = !cart.isSelect  // 没有这个，数据没及时同步到全选
+        let isAllSelectState = Array.from(this.carts).every(cart => {
           console.log(cart.isSelect)
           return cart.isSelect
         })
+        this.isAllSelectState = isAllSelectState
         // console.log(this.isAllSelectState)
       },
       clickAllSelect () {
@@ -106,6 +108,9 @@
         // [...this.carts].forEach(cart => {   //SyntaxError: Unexpected token
           cart.isSelect = this.isAllSelectState
         })
+      },
+      delectCart (index, carts) {
+        carts.splice(index, 1)
       }
     }
   }
