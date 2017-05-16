@@ -11,13 +11,14 @@
       </div>
     </div>
     <div class="bot">
-      <a href="javascript:;">加入购物车</a>
+      <a href="javascript:;" @click="addCart">加入购物车</a>
     </div>
   </div>
 </template>
 
 <script>
   import comSwiper from '../com/swiper'
+  import LocalDB from '../com/localDB'
   import '../../css/detail.scss'
 
   export default {
@@ -35,23 +36,8 @@
     },
     created () {
       this.$store.dispatch('changeHeaderTitle', '商品详情页')
-      this.getDataCart()
     },
-    computed: {
-      totalNowPrice () {
-        let price = 0
-        console.log(typeof (this.carts))
-        // this.carts.forEach(cart => {    // 可以执行，但是报错this.carts.forEach is not a function
-        Array.from(this.carts).forEach(cart => {
-        // [...this.carts].forEach(cart => {   //SyntaxError: Unexpected token
-          if (cart.isSelect) {
-            price += cart.cart_price * cart.cart_num
-          }
-        })
-        console.log(price)
-        return price
-      }
-    },
+    computed: {},
     methods: {
       showSideBar () {
         return this.$store.dispatch('changeSideBarState', true)
@@ -79,6 +65,10 @@
           detail.num = detail.num + 1
           console.log(detail.num)
         }
+      },
+      addCart () {
+        let localDB = new LocalDB('dataCart')
+        console.log(localDB.get('dataCart'))
       }
     }
   }

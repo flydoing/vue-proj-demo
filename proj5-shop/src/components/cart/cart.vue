@@ -53,7 +53,7 @@
     computed: {
       totalNowPrice () {
         let price = 0
-        console.log(typeof (this.carts))
+//        console.log(typeof (this.carts))
         // this.carts.forEach(cart => {    // 可以执行，但是报错this.carts.forEach is not a function
         Array.from(this.carts).forEach(cart => {
         // [...this.carts].forEach(cart => {   //SyntaxError: Unexpected token
@@ -61,7 +61,7 @@
             price += cart.cart_price * cart.cart_num
           }
         })
-        console.log(price)
+//        console.log(price)
         return price
       }
     },
@@ -74,34 +74,34 @@
         return this.$store.dispatch('changeSideBarState', false)
       },
       getDataCart () {
-        let localDB = new LocalDB('shoppingDB')
-        if (JSON.stringify(localDB.get('shoppingDB')) === '{}') {
+        let localDB = new LocalDB('dataCart')
+        if (localDB.get('dataCart').length === 0) {
           console.log('kong')
-        }
-        console.log('kong444')
-        this.$http.get('../../static/data/cart.json').then((response) => {
-          this.dataCart = response.data
+          this.$http.get('../../static/data/cart.json').then((response) => {
+            this.dataCart = response.data
+            this.carts = this.dataCart.data.carts
+            localDB.set(this.dataCart)
+          }, (response) => {
+            // error
+          })
+        } else {
+          console.log('no kong')
+          this.dataCart = localDB.get('dataCart')
           this.carts = this.dataCart.data.carts
-          // console.log(this.carts)
-        }, (response) => {
-          // error
-        })
+        }
       },
       changeNum (change, cart) {
         if (change === -1) {
           if (cart.cart_num >= 2) {
             cart.cart_num = cart.cart_num - 1
-            console.log(cart.cart_num)
           }
         } else {
           cart.cart_num = cart.cart_num + 1
-          console.log(cart.cart_num)
         }
       },
       clickSelect (cart) {
         cart.isSelect = !cart.isSelect  // 没有这个，数据没及时同步到全选
         let isAllSelectState = Array.from(this.carts).every(cart => {
-          console.log(cart.isSelect)
           return cart.isSelect
         })
         this.isAllSelectState = isAllSelectState
