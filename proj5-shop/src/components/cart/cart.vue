@@ -35,7 +35,7 @@
 </template>
 
 <script>
-
+  import LocalDB from '../com/localDB'
   import '../../css/cart.scss'
 
   export default {
@@ -74,6 +74,11 @@
         return this.$store.dispatch('changeSideBarState', false)
       },
       getDataCart () {
+        let localDB = new LocalDB('shoppingDB')
+        if (JSON.stringify(localDB.get('shoppingDB')) === '{}') {
+          console.log('kong')
+        }
+        console.log('kong444')
         this.$http.get('../../static/data/cart.json').then((response) => {
           this.dataCart = response.data
           this.carts = this.dataCart.data.carts
