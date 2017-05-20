@@ -2,16 +2,17 @@
   <div class="s-detail">
     <comSwiper></comSwiper>
     <div class="cont">
-      <p class="name">{{detailData.name}}</p>
-      <span class="price">￥{{detailData.price}}</span>
+      <p class="name">{{detailData.cart_name}}</p>
+      <span class="price">￥{{detailData.cart_price}}</span>
       <div class="goods-counter">
         <a href="javascript:;" class="btn-sub" @click="changeNum(-1, detailData)"> - </a>
-        <input type="text" class="goods-num" readonly="readonly" v-model="detailData.num">
+        <input type="text" class="goods-num" readonly="readonly" v-model="detailData.cart_num">
         <a href="javascript:;" class="btn-add" @click="changeNum(1, detailData)"> + </a>
       </div>
     </div>
     <div class="bot">
-      <a href="javascript:;" @click="addCart">加入购物车</a>
+      <!-- <router-link class="add-cart" v-on:click.native="addCart" to="/cart">加入购物车</router-link> -->
+      <a class="add-cart" href="javascript:;" @click="addCart">加入购物车</a>
     </div>
   </div>
 </template>
@@ -19,15 +20,23 @@
 <script>
   import comSwiper from '../com/swiper'
   import LocalDB from '../com/localDB'
+  import Vue from 'vue'
+  import VueRouter from 'vue-router'
+  Vue.use(VueRouter)
+  const router = new VueRouter()
   import '../../css/detail.scss'
 
   export default {
     data () {
       return {
         detailData: {
-          name: '商品名字55',
-          price: 23,
-          num: 1
+          id: 100048,
+          type: 'type_man',
+          isSelect: false,
+          cart_img: 'https://m.360buyimg.com/mobilecms/s357x458_jfs/t5020/152/1113560747/913290/159da6e1/58ecabd0Nb170698c.jpg!cc_357x458!q50.jpg',
+          cart_name: '商品名字' + this.getRandom(10, 100),
+          cart_num: 1,
+          cart_price: this.getRandom(10, 100)
         }
       }
     },
@@ -57,18 +66,22 @@
       },
       changeNum (change, detail) {
         if (change === -1) {
-          if (detail.num >= 2) {
-            detail.num = detail.num - 1
-            console.log(detail.num)
+          if (detail.cart_num >= 2) {
+            detail.cart_num = detail.cart_num - 1
           }
         } else {
-          detail.num = detail.num + 1
-          console.log(detail.num)
+          detail.cart_num = detail.cart_num + 1
         }
       },
       addCart () {
         let localDB = new LocalDB('dataCart')
-        console.log(localDB.get('dataCart'))
+        let dataCart = localDB.get('dataCart')
+        dataCart.data.carts.unshift(this.detailData)
+        localDB.set(dataCart)
+        router.push({ path: 'cart' })
+      },
+      getRandom (min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min
       }
     }
   }

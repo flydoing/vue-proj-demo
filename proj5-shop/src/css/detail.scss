@@ -57,4 +57,16 @@
   color: #fff;
   border-top: 1px solid #eee;
   background: #ffffff;
+  .add-cart{
+    float: right;
+    height: 34px;
+    margin-top: 8px;
+    margin-right: .5rem;
+    padding: 0 15px;
+    line-height: 34px;
+    font-size: .5rem;
+    color: red;
+    border: 1px solid red;
+    border-radius: 4px;
+  }
 }

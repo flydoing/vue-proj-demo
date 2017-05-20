@@ -53,7 +53,6 @@
     computed: {
       totalNowPrice () {
         let price = 0
-//        console.log(typeof (this.carts))
         // this.carts.forEach(cart => {    // 可以执行，但是报错this.carts.forEach is not a function
         Array.from(this.carts).forEach(cart => {
         // [...this.carts].forEach(cart => {   //SyntaxError: Unexpected token
@@ -61,7 +60,6 @@
             price += cart.cart_price * cart.cart_num
           }
         })
-//        console.log(price)
         return price
       }
     },
@@ -75,8 +73,7 @@
       },
       getDataCart () {
         let localDB = new LocalDB('dataCart')
-        if (localDB.get('dataCart').length === 0) {
-          console.log('kong')
+        if (localDB.get('dataCart').length === 0 || localDB.get('dataCart').data.carts.length === 0) {
           this.$http.get('../../static/data/cart.json').then((response) => {
             this.dataCart = response.data
             this.carts = this.dataCart.data.carts
@@ -85,7 +82,6 @@
             // error
           })
         } else {
-          console.log('no kong')
           this.dataCart = localDB.get('dataCart')
           this.carts = this.dataCart.data.carts
         }
@@ -105,7 +101,6 @@
           return cart.isSelect
         })
         this.isAllSelectState = isAllSelectState
-        // console.log(this.isAllSelectState)
       },
       clickAllSelect () {
         this.isAllSelectState = !this.isAllSelectState
@@ -116,6 +111,9 @@
       },
       delectCart (index, carts) {
         carts.splice(index, 1)
+        let localDB = new LocalDB('dataCart')
+        this.dataCart.data.carts = this.carts
+        localDB.set(this.dataCart)
       }
     }
   }
