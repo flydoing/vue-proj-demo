@@ -2,10 +2,13 @@
   <div class="s-center">
     <div class="cont-center">
       <div class="ban">
-        <p class="uname">用户名</p>
+        <!-- <p class="uname">用户名</p> -->
         <p class="uname"><span>注册</span><span>登录</span></p>
       </div>
-      <div class="item"><a href="javascript:;">我的购物车</a></div>
+      <div class="item">
+        <a href="javascript:;">我的购物车<i>></i></a>
+        <a href="javascript:;">我的购物车<i>></i></a>
+      </div>
     </div>
 
     <div class="cont-register">
