@@ -12,25 +12,25 @@ fieldset{
 .s-center{
   position: relative;
 }
-.cont-center{
-  .ban{
-    height: 5rem;
-    text-align: center;
-    background: rgba(0,0,0,0.1);
-    .uname{
-      padding-top: 2rem;
-      font-size: .4rem;
-      color: #555;
-      span{
-        display: inline-block;
-        padding: 0 .8rem;
-        cursor: pointer;
-      }
-      &>span:first-child{
-        border-right: 1px solid $border;
-      }
+.ban{
+  height: 5rem;
+  text-align: center;
+  background: rgba(0,0,0,0.1);
+  .uname{
+    padding-top: 2rem;
+    font-size: .4rem;
+    color: #555;
+    span{
+      display: inline-block;
+      padding: 0 .8rem;
+      cursor: pointer;
+    }
+    &>span:first-child{
+      border-right: 1px solid $border;
     }
   }
+}
+.cont-center{
   .item{
     margin: .375rem 0 .75rem;
     border-top: 1px solid $border;
@@ -47,6 +47,26 @@ fieldset{
     &>a:last-child{
       border-bottom: none;
     }
+  }
+}
+.form-item{
+  padding: .2rem .5rem;
+  border-bottom: 1px solid $border;
+  label,input{
+    font-size: .8rem;
+  }
+  input{
+    outline: none;
+    border: none;
+  }
+}
+.btn-div{
+  text-align: center;
+  .btn-a{
+    display: inline-block;
+    padding: .4rem .75rem;
+    border: 1px solid red;
+    border-radius: .425rem;
   }
 }
 
