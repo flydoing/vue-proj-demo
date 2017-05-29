@@ -19,7 +19,7 @@
       <div class="form-item">
         <label for="code">验证码</label>
         <input class="" name="code" type="tel" placeholder="请输入验证码" maxlength="6">
-        <button class="" type="button">重新获取</button>
+        <button class="btn-get" type="button">重新获取</button>
       </div>
       <div class="btn-div"><a href="javascript:;" class="btn-a">注册按钮</a></div>
       <fieldset class="">
@@ -36,10 +36,10 @@
       <div class="form-item">
         <label for="password">密码</label>
         <input name="password" type="tel" placeholder="请输入密码" maxlength="6" class="">
-        <a href="javascript:;">眼睛</a>
+        <a class="btn-get" href="javascript:;">眼睛</a>
       </div>
       <div class="btn-div"><a href="javascript:;" class="btn-a">登录按钮</a></div>
-      <fieldset class="">
+      <fieldset class="form-fieldset">
         <legend>或</legend>
         <a href="javascript:;" class="">未有账号？免费注册</a>
       </fieldset>
