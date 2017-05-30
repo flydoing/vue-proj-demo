@@ -2,16 +2,22 @@
   <div class="s-center">
     <div class="ban">
       <!-- <p class="uname">用户名</p> -->
-      <p class="uname"><span>注册</span><span>登录</span></p>
+      <p class="uname" v-if="showState === 'logined'"><span>用户名guojc</span></p>
+      <p class="uname" v-else-if="showState === 'register'"><span>注册</span></p>
+      <p class="uname" v-else-if="showState === 'logining'"><span>登录</span></p>
     </div>
-    <div class="cont-center">
+    <div class="form-item">
+      <p class="form-tips">提示</p>
+    </div>
+    <div class="cont-center" v-if="showState === 'logined'">
       <div class="item">
-        <a href="javascript:;">我的购物车<i>></i></a>
-        <a href="javascript:;">我的购物车<i>></i></a>
+        <a href="javascript:;" @click="toCart">我的购物车<i>></i></a>
+        <a href="javascript:;">我的优惠券<i>></i></a>
+        <a href="javascript:;">个人设置<i>></i></a>
       </div>
     </div>
 
-    <div class="cont-register">
+    <div class="cont-register" v-else-if="showState === 'register'">
       <div class="form-item">
         <label for="mobile">手机号</label>
         <input name="mobile" type="tel" placeholder="请输入手机号" maxlength="11" class="">
@@ -28,7 +34,7 @@
       </fieldset>
     </div>
 
-    <div class="cont-login">
+    <div class="cont-login" v-else-if="showState === 'logining'">
       <div class="form-item">
         <label for="username">账号</label>
         <input name="username" type="tel" placeholder="请输入手机号" maxlength="11" class="">
@@ -48,14 +54,35 @@
 </template>
 
 <script>
+  import Vue from 'vue'
+  import VueRouter from 'vue-router'
+  Vue.use(VueRouter)
+  const router = new VueRouter()
+  import Jam from '../com/jam'
   import '../../css/center.scss'
+  // 进入页面判断是否已经登录,显示对应页面：登录，未登录
+  // 点击注册
+  // 控制显示隐藏
 
   export default {
     data () {
-      return {}
+      return {
+        showState: 'logined',
+        dataLogin: {}
+        // showState: 'register'
+        // showState: 'logining'
+      }
     },
     created () {
       this.$store.dispatch('changeHeaderTitle', '我的')
+      let jam = new Jam()
+      // jam.locDbSet('dataLogin', {name: 'guojc1', pass: 7896})
+      this.dataLogin = jam.locDbGet('dataLogin')
+      if (this.dataLogin === undefined || this.dataLogin === null) {
+        this.showState = 'logining'
+      } else {
+        this.showState = 'logined'
+      }
     },
     methods: {
       showSideBar () {
@@ -64,6 +91,9 @@
       },
       hideSideBar () {
         return this.$store.dispatch('changeSideBarState', false)
+      },
+      toCart () {
+        router.push({ path: 'cart' })
       }
     }
   }
