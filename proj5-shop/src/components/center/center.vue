@@ -2,12 +2,12 @@
   <div class="s-center">
     <div class="ban">
       <!-- <p class="uname">用户名</p> -->
-      <p class="uname" v-if="showState === 'logined'"><span>用户名guojc</span></p>
+      <p class="uname" v-if="showState === 'logined'"><span>用户：{{dataLogin.name}}</span></p>
       <p class="uname" v-else-if="showState === 'register'"><span>注册</span></p>
       <p class="uname" v-else-if="showState === 'logining'"><span>登录</span></p>
     </div>
     <div class="form-item">
-      <p class="form-tips">提示</p>
+      <p class="form-tips">{{tips}}</p>
     </div>
     <div class="cont-center" v-if="showState === 'logined'">
       <div class="item">
@@ -37,14 +37,14 @@
     <div class="cont-login" v-else-if="showState === 'logining'">
       <div class="form-item">
         <label for="username">账号</label>
-        <input name="username" type="tel" placeholder="请输入手机号" maxlength="11" class="">
+        <input name="username" type="tel" placeholder="请输入手机号" maxlength="11" v-model="dataLogin.name">
       </div>
       <div class="form-item">
         <label for="password">密码</label>
-        <input name="password" type="tel" placeholder="请输入密码" maxlength="6" class="">
+        <input name="password" type="tel" placeholder="请输入密码" maxlength="6" v-model="dataLogin.pass">
         <a class="btn-get" href="javascript:;">眼睛</a>
       </div>
-      <div class="btn-div"><a href="javascript:;" class="btn-a">登录按钮</a></div>
+      <div class="btn-div"><a href="javascript:;" class="btn-a" @click="clickLogin">登录按钮</a></div>
       <fieldset class="form-fieldset">
         <legend>或</legend>
         <a href="javascript:;" class="">未有账号？免费注册</a>
@@ -67,21 +67,28 @@
   export default {
     data () {
       return {
+        tips: '',
         showState: 'logined',
-        dataLogin: {}
+        dataLogin: {
+          name: '',
+          pass: ''
+        },
+        jam: function () {}
         // showState: 'register'
         // showState: 'logining'
       }
     },
     created () {
       this.$store.dispatch('changeHeaderTitle', '我的')
-      let jam = new Jam()
-      // jam.locDbSet('dataLogin', {name: 'guojc1', pass: 7896})
-      this.dataLogin = jam.locDbGet('dataLogin')
-      if (this.dataLogin === undefined || this.dataLogin === null) {
+      this.jam = new Jam()
+      // this.jam.locDbSet('dataLogin', {name: 'guojc1', pass: 7896})
+      let lDataLogin = this.jam.locDbGet('dataLogin')
+      if (lDataLogin === undefined || lDataLogin === null) {
         this.showState = 'logining'
       } else {
+        this.dataLogin = this.jam.locDbGet('dataLogin')
         this.showState = 'logined'
+        // 显示用户名
       }
     },
     methods: {
@@ -94,6 +101,21 @@
       },
       toCart () {
         router.push({ path: 'cart' })
+      },
+      clickLogin () {
+        // 验证
+        console.log(this.dataLogin)
+        if (this.jam.isPhone(this.dataLogin.name)) {
+          if (this.jam.isPass(this.dataLogin.pass)) {
+            // 登录成功
+            this.jam.locDbSet('dataLogin', {name: this.dataLogin.name, pass: this.dataLogin.pass})
+            this.showState = 'logined'
+          } else {
+            this.tips = '请输入由字母数字组成的6位密码！'
+          }
+        } else {
+          this.tips = '请输入正确的手机号！'
+        }
       }
     }
   }
