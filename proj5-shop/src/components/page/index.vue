@@ -66,7 +66,7 @@
       </div>
     </div>
 
-    <div class="bot">bot</div>
+    <!-- <div class="bot">bot</div> -->
   </div>
 </template>
 
