@@ -33,7 +33,7 @@
           id: 100048,
           type: 'type_man',
           isSelect: true,
-          cart_img: 'https://m.360buyimg.com/mobilecms/s357x458_jfs/t5020/152/1113560747/913290/159da6e1/58ecabd0Nb170698c.jpg!cc_357x458!q50.jpg',
+          cart_img: 'http://ohe5avf3y.bkt.clouddn.com/pro/vue/vue-shop/vue-proj-goods.jpg',
           cart_name: '商品名字' + this.getRandom(10, 100),
           cart_num: 1,
           cart_price: this.getRandom(10, 100)
@@ -59,7 +59,6 @@
         this.$http.get('../../static/data/cart.json').then((response) => {
           this.dataCart = response.data
           this.carts = this.dataCart.data.carts
-          // console.log(this.carts)
         }, (response) => {
           // error
         })
@@ -74,7 +73,6 @@
         }
       },
       addCart () {
-        console.log('3333')
         let localDB = new LocalDB('dataCart')
         if (localDB.get('dataCart').length === 0 || localDB.get('dataCart').data.carts.length === 0) {
           this.$http.get('../../static/data/cart.json').then((response) => {

@@ -9,7 +9,7 @@
                 "brand_price": 79.9,
                 "brand_name": "商品名字1",
                 "brand_desc": "商品描述商品描述",
-                "brand_pic_url": "https://m.360buyimg.com/mobilecms/s357x458_jfs/t5020/152/1113560747/913290/159da6e1/58ecabd0Nb170698c.jpg!cc_357x458!q50.jpg"
+                "brand_pic_url": "http://ohe5avf3y.bkt.clouddn.com/pro/vue/vue-shop/vue-proj-goods.jpg"
             },
             {
                 "id": 100047,
@@ -17,7 +17,7 @@
                 "brand_price": 89.9,
                 "brand_name": "商品名字2",
                 "brand_desc": "商品描述商品描述",
-                "brand_pic_url": "https://m.360buyimg.com/mobilecms/s357x458_jfs/t5020/152/1113560747/913290/159da6e1/58ecabd0Nb170698c.jpg!cc_357x458!q50.jpg"
+                "brand_pic_url": "http://ohe5avf3y.bkt.clouddn.com/pro/vue/vue-shop/vue-proj-goods.jpg"
             },
             {
                 "id": 100041,
@@ -25,7 +25,7 @@
                 "brand_price": 99.9,
                 "brand_name": "商品名字3",
                 "brand_desc": "商品描述商品描述",
-                "brand_pic_url": "https://m.360buyimg.com/mobilecms/s357x458_jfs/t5020/152/1113560747/913290/159da6e1/58ecabd0Nb170698c.jpg!cc_357x458!q50.jpg"
+                "brand_pic_url": "http://ohe5avf3y.bkt.clouddn.com/pro/vue/vue-shop/vue-proj-goods.jpg"
             }
         ],
         "rexiao": [
@@ -35,7 +35,7 @@
                 "brand_price": 49.9,
                 "brand_name": "商品名字4",
                 "brand_desc": "商品描述商品描述",
-                "brand_pic_url": "https://m.360buyimg.com/mobilecms/s357x458_jfs/t5020/152/1113560747/913290/159da6e1/58ecabd0Nb170698c.jpg!cc_357x458!q50.jpg"
+                "brand_pic_url": "http://ohe5avf3y.bkt.clouddn.com/pro/vue/vue-shop/vue-proj-goods.jpg"
             },
             {
                 "id": 100047,
@@ -43,7 +43,7 @@
                 "brand_price": 59.9,
                 "brand_name": "商品名字5",
                 "brand_desc": "商品描述商品",
-                "brand_pic_url": "https://m.360buyimg.com/mobilecms/s357x458_jfs/t5020/152/1113560747/913290/159da6e1/58ecabd0Nb170698c.jpg!cc_357x458!q50.jpg"
+                "brand_pic_url": "http://ohe5avf3y.bkt.clouddn.com/pro/vue/vue-shop/vue-proj-goods.jpg"
             },
             {
                 "id": 100041,
@@ -51,7 +51,7 @@
                 "brand_price": 69.9,
                 "brand_name": "商品名字6",
                 "brand_desc": "商品描述商品",
-                "brand_pic_url": "https://m.360buyimg.com/mobilecms/s357x458_jfs/t5020/152/1113560747/913290/159da6e1/58ecabd0Nb170698c.jpg!cc_357x458!q50.jpg"
+                "brand_pic_url": "http://ohe5avf3y.bkt.clouddn.com/pro/vue/vue-shop/vue-proj-goods.jpg"
             }
         ],
         "jingpin": [
@@ -61,7 +61,7 @@
                 "brand_price": 19.9,
                 "brand_name": "商品名1字",
                 "brand_desc": "商品描述商品描述",
-                "brand_pic_url": "https://m.360buyimg.com/mobilecms/s357x458_jfs/t5020/152/1113560747/913290/159da6e1/58ecabd0Nb170698c.jpg!cc_357x458!q50.jpg"
+                "brand_pic_url": "http://ohe5avf3y.bkt.clouddn.com/pro/vue/vue-shop/vue-proj-goods.jpg"
             },
             {
                 "id": 100047,
@@ -69,7 +69,7 @@
                 "brand_price": 29.9,
                 "brand_name": "商品名2字",
                 "brand_desc": "商品描述商品描述",
-                "brand_pic_url": "https://m.360buyimg.com/mobilecms/s357x458_jfs/t5020/152/1113560747/913290/159da6e1/58ecabd0Nb170698c.jpg!cc_357x458!q50.jpg"
+                "brand_pic_url": "http://ohe5avf3y.bkt.clouddn.com/pro/vue/vue-shop/vue-proj-goods.jpg"
             },
             {
                 "id": 100041,
@@ -77,7 +77,7 @@
                 "brand_price": 39.9,
                 "brand_name": "商品名3字",
                 "brand_desc": "商品描述商品描述",
-                "brand_pic_url": "https://m.360buyimg.com/mobilecms/s357x458_jfs/t5020/152/1113560747/913290/159da6e1/58ecabd0Nb170698c.jpg!cc_357x458!q50.jpg"
+                "brand_pic_url": "http://ohe5avf3y.bkt.clouddn.com/pro/vue/vue-shop/vue-proj-goods.jpg"
             },
             {
                 "id": 100042,
@@ -85,7 +85,7 @@
                 "brand_price": 49.9,
                 "brand_name": "商品名4字",
                 "brand_desc": "商品描述商品描述",
-                "brand_pic_url": "https://m.360buyimg.com/mobilecms/s357x458_jfs/t5020/152/1113560747/913290/159da6e1/58ecabd0Nb170698c.jpg!cc_357x458!q50.jpg"
+                "brand_pic_url": "http://ohe5avf3y.bkt.clouddn.com/pro/vue/vue-shop/vue-proj-goods.jpg"
             }
         ]
     }

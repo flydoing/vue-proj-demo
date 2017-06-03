@@ -104,7 +104,6 @@
           this.temai = this.dataIndex.data.temai
           this.rexiao = this.dataIndex.data.rexiao
           this.jingpin = this.dataIndex.data.jingpin
-          console.log(this.rexiao)
         }, (response) => {
           // error
         })

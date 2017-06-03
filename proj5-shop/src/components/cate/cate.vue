@@ -64,10 +64,8 @@
       getDataCate () {
         this.$http.get('../../static/data/cate.json').then((response) => {
           this.dataCate = response.data
-          console.log(this.dataCate)
           this.types = this.dataCate.data.types
           this.allBrand = this.dataCate.data.allBrand
-          console.log(this.allBrand)
         }, (response) => {
           // error
         })
