@@ -24,11 +24,11 @@
     <div class="cate-cont">
       <ul>
         <li v-for="brand in allBrand" v-if="nowType==brand.type || nowType=='type_all'">
-          <a class="cont-li" href="javascript:;">
+          <router-link to="detail" class="cont-li" href="javascript:;">
             <img class="pic" :src="brand.brand_pic_url"/>
             <span class="name">{{brand.brand_name}}</span>
             <span class="price">{{brand.brand_price}}</span>
-          </a>
+          </router-link>
         </li>
       </ul>
     </div>

@@ -9,11 +9,11 @@
         <router-link to="/cate" class="head-right">更多 ></router-link>
       </p>
       <div class="cont-main cont-temai">
-        <a class="cont-one" href="javascript:;" v-for="brand in temai">
+        <router-link to="/detail" class="cont-one" href="javascript:;" v-for="brand in temai" :key="brand.id">
           <span class="name">{{brand.brand_name}}</span>
           <span class="price">￥{{brand.brand_price}}</span>
           <img class="pic" :src="brand.brand_pic_url"/>
-        </a>
+        </router-link>
       </div>
     </div>
 
@@ -24,23 +24,25 @@
         <router-link to="/cate" class="head-right">更多 ></router-link>
       </p>
       <div class="cont-main cont-rexiao">
-        <a class="cont-left" href="javascript:;"
+        <router-link to="/detail" class="cont-left" href="javascript:;"
             v-for="(brand, key, index) in rexiao"
-            v-if="key==0">
+            v-if="key==0"
+            :key="brand.id">
           <span class="name">{{brand.brand_name}}</span>
           <span class="desc">{{brand.brand_desc}}</span>
           <img class="pic" :src="brand.brand_pic_url"/>
-        </a>
+        </router-link>
         <div class="cont-right">
-          <a class="cont-right-one" href="javascript:;"
+          <router-link to="/detail" class="cont-right-one" href="javascript:;"
               v-for="(brand, key, index) in rexiao"
-              v-if="key>=1">
+              v-if="key>=1"
+              :key="brand.id">
             <p class="text">
               <span class="name">{{brand.brand_name}}</span>
               <span class="desc">{{brand.brand_desc}}</span>
             </p>
             <img class="pic" :src="brand.brand_pic_url"/>
-          </a>
+          </router-link>
         </div>
       </div>
     </div>
@@ -54,11 +56,11 @@
       <div class="cont-main cont-jingpin">
         <ul>
           <li v-for="brand in jingpin">
-            <a class="cont-li" href="javascript:;">
+            <router-link to="detail" class="cont-li" href="javascript:;">
               <img class="pic" :src="brand.brand_pic_url"/>
               <span class="name">{{brand.brand_name}}</span>
               <span class="price">￥{{brand.brand_price}}</span>
-            </a>
+            </router-link>
           </li>
         </ul>
       </div>
