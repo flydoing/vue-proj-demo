@@ -32,7 +32,7 @@
         detailData: {
           id: 100048,
           type: 'type_man',
-          isSelect: false,
+          isSelect: true,
           cart_img: 'https://m.360buyimg.com/mobilecms/s357x458_jfs/t5020/152/1113560747/913290/159da6e1/58ecabd0Nb170698c.jpg!cc_357x458!q50.jpg',
           cart_name: '商品名字' + this.getRandom(10, 100),
           cart_num: 1,
@@ -74,11 +74,26 @@
         }
       },
       addCart () {
+        console.log('3333')
         let localDB = new LocalDB('dataCart')
-        let dataCart = localDB.get('dataCart')
-        dataCart.data.carts.unshift(this.detailData)
-        localDB.set(dataCart)
-        router.push({ path: 'cart' })
+        if (localDB.get('dataCart').length === 0 || localDB.get('dataCart').data.carts.length === 0) {
+          this.$http.get('../../static/data/cart.json').then((response) => {
+            this.dataCart = response.data
+            this.carts = this.dataCart.data.carts
+            localDB.set(this.dataCart)
+            let dataCart = localDB.get('dataCart')
+            dataCart.data.carts.unshift(this.detailData)
+            localDB.set(dataCart)
+            router.push({ path: 'cart' })
+          }, (response) => {
+            // error
+          })
+        } else {
+          let dataCart = localDB.get('dataCart')
+          dataCart.data.carts.unshift(this.detailData)
+          localDB.set(dataCart)
+          router.push({ path: 'cart' })
+        }
       },
       getRandom (min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min

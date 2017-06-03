@@ -91,8 +91,7 @@
       // this.jam.locDbSet('dataLogin', {name: 'guojc1', pass: 7896})
       let lDataLogin = this.jam.locDbGet('dataLogin')
       if (lDataLogin === undefined || lDataLogin === null) {
-        // this.showState = 'logining'
-        this.showState = 'register'
+        this.showState = 'logining'
       } else {
         this.dataLogin = this.jam.locDbGet('dataLogin')
         this.showState = 'logined'
@@ -150,9 +149,11 @@
       },
       toRegister () {
         this.showState = 'register'
+        this.tips = ''
       },
       toLogin () {
         this.showState = 'logining'
+        this.tips = ''
       }
     }
   }
