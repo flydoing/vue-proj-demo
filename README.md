@@ -8,6 +8,7 @@ demos for leraning vue2.0
 主要用到：`vue-router2`
 
 安装： `npm install`
+
 运行： `npm run dev`
 
 ## proj3-resource
@@ -15,6 +16,7 @@ demos for leraning vue2.0
 主要用到：`vue-router2,vue-resource`
 
 安装： `npm install`
+
 运行： `npm run dev`
 
 ## proj4-cli-vuex
@@ -22,6 +24,7 @@ demos for leraning vue2.0
 主要用到：`vue-router2,axios,vuex2`
 
 安装： `npm install`
+
 运行： `npm run dev`
 
 ## proj5-shop 
@@ -35,8 +38,10 @@ axios 请求数据 ，localStorage 本地存储。
 主要用到：`vue-cli + vue2 + vue-router2 + vuex2 + axios + es6 + sass + eslint`
 
 安装： `npm install`
+
 运行： `npm run dev`
 
 截图示例：
+
 ![](http://ohe5avf3y.bkt.clouddn.com/pro/vue/vue-shop/vue-shop-show1.jpg) ![](http://ohe5avf3y.bkt.clouddn.com/pro/vue/vue-shop/vue-shop-show2.jpg) ![](http://ohe5avf3y.bkt.clouddn.com/pro/vue/vue-shop/vue-shop-show3.jpg) ![](http://ohe5avf3y.bkt.clouddn.com/pro/vue/vue-shop/vue-shop-show4.jpg) ![](http://ohe5avf3y.bkt.clouddn.com/pro/vue/vue-shop/vue-shop-show5.jpg)
 
