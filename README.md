@@ -3,6 +3,8 @@ demos for leraning vue2.0
 
 一步步学习，最终基于 `vue-cli + vue2 + vue-router2 + vuex2 + axios + es6 + eslint + sass + rem` 实现一个小项目 `proj5-shop` 。
 
+> 该项目的数据展示都是模拟的请求本地json数据的；近期新学习了 `node+mongodb` , 于是在此vue2项目为前端模板、后台采用 `express+mongoose` 重新写了数据接口；详情请移步到这：[https://github.com/gjincai/vue-node-proj](https://github.com/gjincai/vue-node-proj)
+
 ## proj2-my-webpack-simple
 基于 [vuejs-templates](https://github.com/vuejs-templates) 的 `webpack-simple` 构建，
 主要用到：`vue-router2`
